@@ -7,5 +7,6 @@ def get_embeddings():
 
     return HuggingFaceEmbeddings(
         model_name="sentence-transformers/all-MiniLM-L6-v2",
-        cache_folder=cache_dir   
+        # cache_folder=cache_dir   
+        cache_folder="./models"
     )
