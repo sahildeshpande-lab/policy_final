@@ -1,5 +1,5 @@
 from langchain_community.vectorstores import FAISS
-from embedding import get_embeddings
+from embbeding import get_embeddings
 from llm import OpenRouterLLM
 from config import VECTOR_DB_PATH
 import streamlit as st
