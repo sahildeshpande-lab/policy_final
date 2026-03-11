@@ -12,18 +12,15 @@ def _get_splitter():
         chunk_overlap=50
     )
 
+embeddings = get_embeddings()
 
 def ingest_single_pdf(pdf_path: str):
-    """
-    Incrementally add ONE PDF to FAISS
-    """
+
     loader = PyPDFLoader(pdf_path)
     documents = loader.load()
 
     splitter = _get_splitter()
     chunks = splitter.split_documents(documents)
-
-    embeddings = get_embeddings()
 
     if os.path.exists(VECTOR_DB_PATH):
         vector_db = FAISS.load_local(
@@ -38,7 +35,6 @@ def ingest_single_pdf(pdf_path: str):
     vector_db.save_local(VECTOR_DB_PATH)
 
     return len(chunks)
-
 
 def ingest_all_pdfs(pdf_dir="pdfs"):
     """
