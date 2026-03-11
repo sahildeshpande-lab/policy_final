@@ -5,6 +5,6 @@ services:
     branch: main
     region: oregon 
     buildCommand: "pip install --no-cache-dir -r requirements.txt"
-    startCommand: "streamlit run app.py"
+    startCommand: "streamlit run app.py --server.port $PORT --server.headless true --server.runOnSave false"
     pythonVersion: "3.13"  
 
