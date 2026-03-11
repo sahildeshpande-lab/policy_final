@@ -1,0 +1,11 @@
+services:
+  - type: web
+    name: policy-final
+    env: python
+    branch: main
+    region: oregon  # adjust if you deploy elsewhere
+    buildCommand: "pip install --no-cache-dir -r requirements.txt"
+    startCommand: "streamlit run app.py"
+    pythonVersion: "3.13"  # use 3.13 to avoid the Pydantic/v1 warning
+    # environment:
+    #   PYTHONWARNINGS: "ignore::UserWarning"
