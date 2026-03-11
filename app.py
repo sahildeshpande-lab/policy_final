@@ -34,6 +34,9 @@ def load_query_function():
     from query import query_rag
     return query_rag
 
+
+
+
 @st.cache_resource
 def load_summary_graph():
     from langgraph_summarize import build_summary_graph
@@ -84,6 +87,7 @@ if "is_first_message" not in st.session_state:
 
 
 def login_screen():
+    
     st.title("🔐 Login")
     email = st.text_input("Company Email")
     name = st.text_input("Name (optional)")
@@ -99,6 +103,7 @@ if "user" not in st.session_state:
     login_screen()
     st.stop()
 
+query_rag = load_query_function()
 USER_ID = st.session_state.user["user_id"]
 
 st.sidebar.title("📄 PDF Upload")
@@ -137,7 +142,8 @@ if uploaded_file:
 
 
             progress.progress(30)
-            ingest_single_pdf(save_path)
+            if os.getenv("RENDER") is None:
+                ingest_single_pdf(save_path)
             progress.progress(100)
 
             st.success("PDF indexed successfully")
