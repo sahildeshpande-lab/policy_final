@@ -8,6 +8,8 @@ python-dotenv
 requests
 langgraph
 faiss-cpu
+fastapi
+uvicorn
 pypdf
 pandas
 numpy
