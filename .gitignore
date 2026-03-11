@@ -1,3 +1,4 @@
 .env
 models_cache/
 venv
+pdfs
