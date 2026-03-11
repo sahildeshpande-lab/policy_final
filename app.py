@@ -3,7 +3,8 @@ import json
 import uuid
 import hashlib
 import subprocess
-import streamlit as st
+import streamlit as st            
+from ingest import ingest_single_pdf
 import sys 
 
 
@@ -120,8 +121,10 @@ if uploaded_file:
             progress = st.progress(0)
             st.write(" Indexing PDF...")
 
+
+
             progress.progress(30)
-            subprocess.run([sys.executable, "ingest.py"], check=True)
+            ingest_single_pdf(save_path)
             progress.progress(100)
 
             st.success("PDF indexed successfully")

@@ -4,17 +4,23 @@ from llm import OpenRouterLLM
 from config import VECTOR_DB_PATH
 import streamlit as st
 
+embeddings = get_embeddings()
+
 
 def format_docs(docs):
     formatted = []
     sources = set()
+
     for doc in docs:
         source = doc.metadata.get("source", "unknown")
         page = doc.metadata.get("page", "N/A")
+
         sources.add(source)
+
         formatted.append(
             f"[Source: {source}, Page: {page}]\n{doc.page_content}"
         )
+
     return "\n\n".join(formatted), list(sources)
 
 
@@ -22,14 +28,19 @@ def format_docs(docs):
 def load_vector_db():
     return FAISS.load_local(
         VECTOR_DB_PATH,
-        embeddings=get_embeddings(),
+        embeddings=embeddings,
         allow_dangerous_deserialization=True
     )
 
 
+@st.cache_resource
+def get_retriever():
+    vector_db = load_vector_db()
+    return vector_db.as_retriever(search_kwargs={"k": 5})
+
+
 def query_rag(question: str) -> dict:
-    vector_db = load_vector_db()   
-    retriever = vector_db.as_retriever(search_kwargs={"k": 5})
+    retriever = get_retriever()
 
     docs = retriever.invoke(question)
 
@@ -62,8 +73,3 @@ USER QUESTION:
         "answer": answer,
         "sources": sources
     }
-
-
-if __name__ == "__main__":
-    user_question = input("Ask a policy question: ")
-    query_rag(user_question)
