@@ -27,6 +27,19 @@ REGISTRY_FILE = "uploaded_pdfs.json"
 
 os.makedirs(PDF_DIR, exist_ok=True)
 
+import streamlit as st
+
+@st.cache_resource
+def load_query_function():
+    from query import query_rag
+    return query_rag
+
+@st.cache_resource
+def load_summary_graph():
+    from langgraph_summarize import build_summary_graph
+    return build_summary_graph
+
+
 st.set_page_config(page_title="Policy Assistant", layout="wide")
 create_tables()
 
