@@ -7,21 +7,24 @@ load_dotenv()
 
 class OpenRouterLLM:
     def __init__(self):
-        self.api_key = os.getenv("OPENROUTER_API_KEY") or st.secrets.get("OPENROUTER_API_KEY")
-        self.model = os.getenv("OPENROUTER_MODEL") or st.secrets.get("OPENROUTER_MODEL", "nvidia/nemotron-3-nano-30b-a3b:free")
+        self.api_key = os.getenv("OPENROUTER_API_KEY")
 
         if not self.api_key:
-            raise ValueError("OPENROUTER_API_KEY not found in environment")
+            self.api_key = st.secrets["OPENROUTER_API_KEY"]
+
+        self.model = os.getenv("OPENROUTER_MODEL", "nvidia/nemotron-3-nano-30b-a3b:free")
+
+        if not self.api_key:
+            raise ValueError("OPENROUTER_API_KEY not found")
 
         self.url = "https://openrouter.ai/api/v1/chat/completions"
 
         self.headers = {
             "Authorization": f"Bearer {self.api_key}",
             "Content-Type": "application/json",
-            "HTTP-Referer": "https://ai-in-hr-domain.streamlit.app/",
+            "HTTP-Referer": "https://ai-in-hr-domain.streamlit.app",
             "X-Title": "Policy Chatbot"
-        }
-
+    }
     def generate(self, prompt: str) -> str:
         response = requests.post(
             self.url,
