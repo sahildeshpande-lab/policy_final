@@ -18,7 +18,7 @@ class OpenRouterLLM:
         self.headers = {
             "Authorization": f"Bearer {self.api_key}",
             "Content-Type": "application/json",
-            "HTTP-Referer": "https://your-app-name.streamlit.app",
+            "HTTP-Referer": "https://ai-in-hr-domain.streamlit.app/",
             "X-Title": "Policy Chatbot"
         }
 
@@ -35,11 +35,12 @@ class OpenRouterLLM:
             timeout=60
         )
 
-        response.raise_for_status()
+        if response.status_code != 200:
+            return f"API Error {response.status_code}: {response.text}"
+
         data = response.json()
 
         if "choices" not in data:
-            error_msg = data.get("error", {}).get("message", "Unknown LLM error")
-            return f"LLM Error: {error_msg}"
-
+            return f"LLM Error: {data}"
+ 
         return data["choices"][0]["message"]["content"].strip()
