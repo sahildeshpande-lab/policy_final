@@ -8,7 +8,7 @@ load_dotenv()
 class OpenRouterLLM:
     def __init__(self):
         self.api_key = os.getenv("OPENROUTER_API_KEY") or st.secrets.get("OPENROUTER_API_KEY")
-        self.model = os.getenv("OPENROUTER_MODEL") or st.secrets.get("OPENROUTER_MODEL", "openai/gpt-4o-mini")
+        self.model = os.getenv("OPENROUTER_MODEL") or st.secrets.get("OPENROUTER_MODEL", "nvidia/nemotron-3-nano-30b-a3b:free")
 
         if not self.api_key:
             raise ValueError("OPENROUTER_API_KEY not found in environment")
