@@ -1,6 +1,6 @@
 from langchain_community.vectorstores import FAISS
 from embbeding import get_embeddings
-from llm import OpenRouterLLM
+from llm import GroqLLM
 from config import VECTOR_DB_PATH
 import streamlit as st
 
@@ -66,7 +66,7 @@ USER QUESTION:
 {question}
 """
 
-    llm = OpenRouterLLM()
+    llm = GroqLLM()
     answer = llm.generate(prompt)
 
     return {

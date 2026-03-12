@@ -1,7 +1,7 @@
 from typing import TypedDict
 from langgraph.graph import StateGraph, END
 
-from llm import OpenRouterLLM
+from llm import GroqLLM
 
 
 
@@ -11,7 +11,7 @@ class SummaryState(TypedDict):
 
 
 def summarize_ai_response(state: SummaryState) -> SummaryState:
-    llm = OpenRouterLLM()
+    llm = GroqLLM()
 
     prompt = f"""
 Summarize the following assistant response into a short title
