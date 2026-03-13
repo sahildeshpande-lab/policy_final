@@ -14,7 +14,7 @@ class GroqLLM :
         if not self.api_key :
             raise ValueError(" GROQ_API_KEY not found")
         
-        self.model = "llama-3.1-8b-instant"
+        self.model = "llama-3.3-70b-versatile"
 
         self.url = "https://api.groq.com/openai/v1/chat/completions"
 
