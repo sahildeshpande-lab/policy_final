@@ -1,9 +1,8 @@
 from langchain_community.vectorstores import FAISS
 from embbeding import get_embeddings
-from llm import GroqLLM
+from llm import GeminiLLM
 from config import VECTOR_DB_PATH
-import streamlit as st
-
+from functools import lru_cache
 embeddings = get_embeddings()
 
 
@@ -24,7 +23,7 @@ def format_docs(docs):
     return "\n\n".join(formatted), list(sources)
 
 
-@st.cache_resource
+@lru_cache(maxsize=None)
 def load_vector_db():
     return FAISS.load_local(
         VECTOR_DB_PATH,
@@ -33,15 +32,15 @@ def load_vector_db():
     )
 
 
-@st.cache_resource
+@lru_cache(maxsize=None)
 def get_retriever():
     vector_db = load_vector_db()
     return vector_db.as_retriever(search_kwargs={"k": 5})
 
 
-def query_rag(question: str) -> dict:
+def query_rag(question: str, request_type: str = "Any Query") -> dict:
     retriever = get_retriever()
-
+    
     docs = retriever.invoke(question)
 
     if not docs:
@@ -54,6 +53,7 @@ def query_rag(question: str) -> dict:
 
     prompt = f"""
 You are a company policy assistant.
+The user is asking for help regarding: {request_type}
 
 Behavior rules:
 
@@ -79,7 +79,7 @@ USER QUESTION:
 {question}
 """
 
-    llm = GroqLLM()
+    llm = GeminiLLM()
     answer = llm.generate(prompt)
 
     return {

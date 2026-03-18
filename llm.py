@@ -1,25 +1,21 @@
 import os
 import requests
-import streamlit as st
 from dotenv import load_dotenv 
 
 load_dotenv()
 
-class GroqLLM :
+class GeminiLLM :
     def __init__(self):
-        self.api_key=os.getenv("GROQ_API_KEY")
+        self.api_key=os.getenv("GEMINI_API_KEY")
 
         if not self.api_key :
-            self.api_key = st.secrets["GROQ_API_KEY"]
-        if not self.api_key :
-            raise ValueError(" GROQ_API_KEY not found")
+            raise ValueError(" GEMINI_API_KEY not found")
         
-        self.model = "llama-3.3-70b-versatile"
-
-        self.url = "https://api.groq.com/openai/v1/chat/completions"
+        self.model = "gemini-2.5-flash-lite"
+        
+        self.url = f"https://generativelanguage.googleapis.com/v1alpha/models/{self.model}:generateContent?key={self.api_key}"
 
         self.headers ={
-            "Authorization":f"Bearer {self.api_key}",
             "Content-Type": "application/json"
         }
 
@@ -28,12 +24,13 @@ class GroqLLM :
             self.url,
             headers=self.headers,
             json={
-                "model":self.model ,
-                "messages":[
-                    {"role":"user","content":prompt}
-                ],
-                "max_tokens":1000,
-                "temperature":0.2
+                "contents": [{
+                    "parts": [{"text": prompt}]
+                }],
+                "generationConfig": {
+                    "maxOutputTokens": 1000,
+                    "temperature": 0.2
+                }
             },
             timeout=60
         )
@@ -43,8 +40,8 @@ class GroqLLM :
         
         data = response.json()
 
-        if "choices" not in data :
+        if "candidates" not in data or not data["candidates"] :
             return f"LLM Error : {data}"
         
-        return data["choices"][0]["message"]["content"].strip()
+        return data["candidates"][0]["content"]["parts"][0]["text"].strip()
 

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Policy Assistant</title>
+    <link rel="stylesheet" href="/static/styles.css">
+</head>
+<body>
+    <div class="sidebar">
+        <h2>📄 PDF Upload</h2>
+        <div class="upload-section">
+            <input type="file" id="pdfUpload" accept=".pdf">
+            <button id="uploadBtn">Upload</button>
+            <div id="uploadStatus"></div>
+        </div>
+        <hr>
+        <h2>💬 Conversations</h2>
+        <button id="newChatBtn">New Chat</button>
+        <div id="conversationsList"></div>
+    </div>
+    
+    <div class="main-content">
+        <div class="header">
+            <h1>Policy Chatbot</h1>
+            <button id="logoutBtn">🚪 Logout</button>
+        </div>
+        
+        <div class="chat-container">
+            <div id="welcomeScreen" class="welcome-screen">
+                <h3>Hello, how can I help you today?</h3>
+                <div class="pills" id="categoryPills">
+                    <button class="pill active" data-type="Any Query">Any Query</button>
+                    <button class="pill" data-type="Company Policies">Company Policies</button>
+                    <button class="pill" data-type="Leave Apply">Leave Apply</button>
+                    <button class="pill" data-type="Apply WFH">Apply WFH</button>
+                    <button class="pill" data-type="IT Ticket Raised">IT Ticket Raised</button>
+                    <button class="pill" data-type="HR Related Instructions">HR Related Instructions</button>
+                </div>
+                <div class="current-category">Currently assisting with: <strong id="currentCategoryText">Any Query</strong></div>
+            </div>
+            
+            <div id="chatHistory" class="chat-history"></div>
+            
+
+        </div>
+        
+        <div class="input-area">
+            <input type="text" id="chatInput" placeholder="Ask a query...">
+            <button id="sendBtn">Send</button>
+        </div>
+    </div>
+    <script src="/static/app.js"></script>
+</body>
+</html>

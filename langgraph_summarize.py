@@ -1,8 +1,6 @@
 from typing import TypedDict
 from langgraph.graph import StateGraph, END
-
-from llm import GroqLLM
-
+from llm import GeminiLLM
 
 
 class SummaryState(TypedDict):
@@ -11,7 +9,7 @@ class SummaryState(TypedDict):
 
 
 def summarize_ai_response(state: SummaryState) -> SummaryState:
-    llm = GroqLLM()
+    llm = GeminiLLM()
 
     prompt = f"""
 Summarize the following assistant response into a short title

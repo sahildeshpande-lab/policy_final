@@ -13,3 +13,4 @@ uvicorn
 pypdf
 pandas
 numpy
+python-multipart
