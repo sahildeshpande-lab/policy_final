@@ -179,7 +179,78 @@ const FLOWS = {
 document.addEventListener("DOMContentLoaded", () => {
     loadConversations();
     setupEventListeners();
+    setupErrorHandling();
 });
+
+function showLoading(message = "Processing...") {
+    const overlay = document.getElementById('loadingOverlay');
+    const loadingText = overlay.querySelector('.loading-text');
+    loadingText.textContent = message;
+    overlay.classList.remove('hidden');
+}
+
+function hideLoading() {
+    document.getElementById('loadingOverlay').classList.add('hidden');
+}
+
+function showError(message) {
+    const toast = document.getElementById('errorToast');
+    const errorMessage = toast.querySelector('.error-message');
+    errorMessage.textContent = message;
+    toast.classList.remove('hidden');
+    
+    setTimeout(() => {
+        toast.classList.add('hidden');
+    }, 5000);
+}
+
+function setupErrorHandling() {
+    const errorClose = document.querySelector('.error-close');
+    errorClose.addEventListener('click', () => {
+        document.getElementById('errorToast').classList.add('hidden');
+    });
+    
+    window.addEventListener('unhandledrejection', (event) => {
+        showError('An unexpected error occurred. Please try again.');
+        console.error('Unhandled promise rejection:', event.reason);
+    });
+    
+    window.addEventListener('error', (event) => {
+        showError('An unexpected error occurred. Please try again.');
+        console.error('Global error:', event.error);
+    });
+}
+
+function validateInput(value, type = 'text') {
+    if (!value || value.trim() === '') {
+        return { valid: false, message: 'This field is required' };
+    }
+    
+    if (type === 'email') {
+        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        if (!emailRegex.test(value)) {
+            return { valid: false, message: 'Please enter a valid email address' };
+        }
+    }
+    
+    if (type === 'employeeId') {
+        if (!/^SOL\d+/i.test(value)) {
+            return { valid: false, message: 'Employee ID should start with SOL followed by numbers' };
+        }
+    }
+    
+    if (type === 'date') {
+        const selectedDate = new Date(value);
+        const today = new Date();
+        today.setHours(0, 0, 0, 0);
+        
+        if (selectedDate < today) {
+            return { valid: false, message: 'Date cannot be in the past' };
+        }
+    }
+    
+    return { valid: true };
+}
 
 function setupEventListeners() {
     document.getElementById('uploadBtn').addEventListener('click', uploadPdf);
@@ -200,7 +271,8 @@ function setupEventListeners() {
     });
 
     document.getElementById('chatInput').addEventListener('keypress', (e) => {
-        if (e.key === 'Enter') {
+        if (e.key === 'Enter' && !e.shiftKey) {
+            e.preventDefault();
             const input = document.getElementById('chatInput');
             const msg = input.value.trim();
             if (msg) {
@@ -212,8 +284,12 @@ function setupEventListeners() {
 
     document.querySelectorAll('.pill').forEach(btn => {
         btn.addEventListener('click', (e) => {
-            document.querySelectorAll('.pill').forEach(b => b.classList.remove('active'));
+            document.querySelectorAll('.pill').forEach(b => {
+                b.classList.remove('active');
+                b.setAttribute('aria-pressed', 'false');
+            });
             e.target.classList.add('active');
+            e.target.setAttribute('aria-pressed', 'true');
             requestType = e.target.dataset.type;
             document.getElementById('currentCategoryText').textContent = requestType;
 
@@ -239,33 +315,73 @@ function startFlow(type) {
 }
 
 async function loadConversations() {
-    const res = await fetch('/conversations');
-    const convos = await res.json();
-    const list = document.getElementById('conversationsList');
-    list.innerHTML = '';
-    convos.forEach(c => {
-        const btn = document.createElement('button');
-        btn.className = 'convo-btn' + (c.thread_id === currentThreadId ? ' active' : '');
-        btn.textContent = c.title;
-        btn.onclick = () => loadChat(c.thread_id);
-        list.appendChild(btn);
-    });
+    try {
+        const res = await fetch('/conversations');
+        if (!res.ok) throw new Error('Failed to load conversations');
+        const convos = await res.json();
+        const list = document.getElementById('conversationsList');
+        list.innerHTML = '';
+        
+        if (convos.length === 0) {
+            const emptyMsg = document.createElement('div');
+            emptyMsg.className = 'empty-conversations';
+            emptyMsg.textContent = 'No conversations yet';
+            emptyMsg.style.cssText = 'text-align: center; color: #64748b; padding: 20px; font-size: 0.875rem;';
+            list.appendChild(emptyMsg);
+            return;
+        }
+        
+        convos.forEach(c => {
+            const btn = document.createElement('button');
+            btn.className = 'convo-btn' + (c.thread_id === currentThreadId ? ' active' : '');
+            btn.textContent = c.title || 'Untitled Conversation';
+            btn.onclick = () => loadChat(c.thread_id);
+            list.appendChild(btn);
+        });
+    } catch (error) {
+        console.error('Error loading conversations:', error);
+        showError('Failed to load conversations. Please refresh the page.');
+    }
 }
 
 async function loadChat(threadId) {
-    currentThreadId = threadId;
-    flowStep = -1;
-    document.getElementById('welcomeScreen').classList.add('hidden');
-    const res = await fetch(`/conversations/${threadId}/messages`);
-    const msgs = await res.json();
+    try {
+        showLoading('Loading conversation...');
+        currentThreadId = threadId;
+        flowStep = -1;
+        document.getElementById('welcomeScreen').classList.add('hidden');
+        
+        const res = await fetch(`/conversations/${threadId}/messages`);
+        if (!res.ok) throw new Error('Failed to load conversation');
+        const msgs = await res.json();
 
-    const history = document.getElementById('chatHistory');
-    history.innerHTML = '';
-    msgs.forEach(m => {
-        appendMessage('user', m.user_message);
-        appendMessage('assistant', m.assistant_message);
-    });
-    loadConversations();
+        const history = document.getElementById('chatHistory');
+        history.innerHTML = '';
+        
+        if (msgs.length === 0) {
+            const emptyMsg = document.createElement('div');
+            emptyMsg.className = 'empty-messages';
+            emptyMsg.textContent = 'No messages in this conversation';
+            emptyMsg.style.cssText = 'text-align: center; color: #64748b; padding: 40px; font-style: italic;';
+            history.appendChild(emptyMsg);
+        } else {
+            msgs.forEach(m => {
+                if (m.user_message) {
+                    appendMessage('user', m.user_message);
+                }
+                if (m.assistant_message) {
+                    appendMessage('assistant', m.assistant_message);
+                }
+            });
+        }
+        
+        await loadConversations();
+    } catch (error) {
+        console.error('Error loading chat:', error);
+        showError('Failed to load conversation. Please try again.');
+    } finally {
+        hideLoading();
+    }
 }
 
 function appendMessage(role, text, options = null, inputType = null) {
@@ -305,6 +421,11 @@ function appendMessage(role, text, options = null, inputType = null) {
             const dateInput = document.createElement('input');
             dateInput.type = 'date';
             dateInput.className = 'date-picker-input';
+            
+            // Set minimum date to today to prevent past dates
+            const today = new Date();
+            today.setHours(0, 0, 0, 0);
+            dateInput.min = today.toISOString().split('T')[0];
 
             const btn = document.createElement('button');
             btn.className = 'option-btn primary-btn';
@@ -313,7 +434,7 @@ function appendMessage(role, text, options = null, inputType = null) {
                 if (dateInput.value) {
                     handleUserInput(dateInput.value, dateInput.value);
                 } else {
-                    alert("Please select a date first.");
+                    showError("Please select a date first.");
                 }
             };
 
@@ -418,7 +539,24 @@ async function handleUserInput(msgValue, displayMsg) {
     const activeFlow = FLOWS[requestType];
 
     if (activeFlow && flowStep >= 0) {
-        // Collect data
+        const currentQuestion = activeFlow.questions[flowStep];
+        let validationType = 'text';
+        
+        if (currentQuestion.key.toLowerCase().includes('email')) {
+            validationType = 'email';
+        } else if (currentQuestion.key.toLowerCase().includes('empid') || currentQuestion.key === 'EmployeeId') {
+            validationType = 'employeeId';
+        } else if (currentQuestion.inputType === 'date') {
+            validationType = 'date';
+        }
+        
+        const validation = validateInput(msgValue, validationType);
+        if (!validation.valid) {
+            showError(validation.message);
+            appendMessage('assistant', `Please correct the following issue: ${validation.message}`);
+            return;
+        }
+        
         flowFormData[activeFlow.questions[flowStep].key] = msgValue;
         flowStep++;
 
@@ -433,63 +571,138 @@ async function handleUserInput(msgValue, displayMsg) {
         return;
     }
 
-    // Normal chat
-    const res = await fetch('/chat', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({
-            thread_id: currentThreadId,
-            message: msgValue,
-            request_type: requestType
-        })
-    });
-    const data = await res.json();
-    currentThreadId = data.thread_id;
-    appendMessage('assistant', data.response);
-    if (data.sources && data.sources.length > 0) {
-        appendMessage('assistant', 'Sources:<br>' + data.sources.join('<br>'));
+    try {
+        showLoading('Getting response...');
+        
+        const res = await fetch('/chat', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({
+                thread_id: currentThreadId,
+                message: msgValue,
+                request_type: requestType
+            })
+        });
+        
+        if (!res.ok) {
+            throw new Error(res.status === 429 ? 'Too many requests. Please wait a moment.' : 'Failed to get response');
+        }
+        
+        const data = await res.json();
+        currentThreadId = data.thread_id;
+        appendMessage('assistant', data.response);
+        
+        if (data.sources && data.sources.length > 0) {
+            appendMessage('assistant', 'Sources:<br>' + data.sources.join('<br>'));
+        }
+        
+        await loadConversations();
+    } catch (error) {
+        console.error('Error in chat:', error);
+        showError(error.message || 'Failed to send message. Please try again.');
+        appendMessage('assistant', 'I apologize, but I encountered an error. Please try again.');
+    } finally {
+        hideLoading();
     }
-    loadConversations();
 }
 
 async function submitFlow(type) {
     const flow = FLOWS[type];
-    const formData = await flow.formatData(flowFormData);
-
+    
     try {
+        showLoading('Submitting application...');
+        const formData = await flow.formatData(flowFormData);
+
         const res = await fetch(flow.endpoint, {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify(formData)
         });
+        
+        if (!res.ok) {
+            throw new Error('Failed to submit application');
+        }
+        
         const data = await res.json();
         currentThreadId = data.thread_id;
 
         const summaryMsg = `${flow.successMsg}\n\nCollected Data:\n` + flow.formatSummary(formData);
-
         appendMessage('assistant', summaryMsg);
-        loadConversations();
-    } catch (e) {
-        appendMessage('assistant', 'Failed to submit application. Please try again.');
+        
+        // Ask if employee needs help with anything else
+        setTimeout(() => {
+            if (type === 'Apply WFH') {
+                appendMessage('assistant', 'Your WFH request has been submitted. Please note that you will receive an email with the approval status within 24 hours. Is there anything else I can help you with?');
+            } else if (type === 'IT Ticket Raised') {
+                appendMessage('assistant', 'Your IT ticket has been submitted. Our IT team will review and respond to your request within 24 hours. Is there anything else I can help you with?');
+            } else if (type === 'Leave Apply') {
+                appendMessage('assistant', 'Your leave application has been submitted successfully. You will receive an email confirmation shortly. Is there anything else I can help you with?');
+            } else {
+                appendMessage('assistant', 'Is there anything else I can help you with today? You can ask about company policies, apply for WFH, raise IT tickets, or any other queries.');
+            }
+        }, 1000);
+        
+        await loadConversations();
+    } catch (error) {
+        console.error('Error submitting flow:', error);
+        showError('Failed to submit application. Please try again.');
+        appendMessage('assistant', 'I apologize, but there was an error submitting your application. Please try again.');
+    } finally {
+        hideLoading();
     }
 }
 
 async function uploadPdf() {
     const fileNode = document.getElementById('pdfUpload');
-    if (!fileNode.files.length) return;
+    const statusDiv = document.getElementById('uploadStatus');
+    
+    if (!fileNode.files.length) {
+        showError('Please select a PDF file first');
+        return;
+    }
+    
     const file = fileNode.files[0];
+    
+    if (file.type !== 'application/pdf') {
+        showError('Please select a valid PDF file');
+        return;
+    }
+    
+    if (file.size > 10 * 1024 * 1024) { // 10MB limit
+        showError('File size must be less than 10MB');
+        return;
+    }
+    
     const formData = new FormData();
     formData.append('file', file);
 
-    document.getElementById('uploadStatus').textContent = 'Uploading...';
+    statusDiv.textContent = 'Uploading...';
+    statusDiv.style.color = '#3b82f6';
+    
     try {
         const res = await fetch('/upload_pdf', {
             method: 'POST',
             body: formData
         });
+        
+        if (!res.ok) {
+            throw new Error('Upload failed');
+        }
+        
         const data = await res.json();
-        document.getElementById('uploadStatus').textContent = data.message;
-    } catch (e) {
-        document.getElementById('uploadStatus').textContent = 'Error uploading';
+        statusDiv.textContent = data.message || 'Upload successful!';
+        statusDiv.style.color = '#10b981';
+        fileNode.value = ''; // Clear file input
+        
+        // Show success message
+        setTimeout(() => {
+            statusDiv.textContent = '';
+        }, 5000);
+        
+    } catch (error) {
+        console.error('Upload error:', error);
+        statusDiv.textContent = 'Upload failed. Please try again.';
+        statusDiv.style.color = '#ef4444';
+        showError('Failed to upload PDF. Please try again.');
     }
 }

@@ -3,53 +3,77 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Policy Assistant</title>
+    <meta name="description" content="AI-powered policy assistant for company policies, leave applications, WFH requests, and IT support">
+    <meta name="keywords" content="policy assistant, HR, leave application, WFH, IT support">
+    <meta name="author" content="Policy Assistant">
+    <title>Policy Assistant - AI-Powered Company Support</title>
     <link rel="stylesheet" href="/static/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 </head>
 <body>
-    <div class="sidebar">
-        <h2>📄 PDF Upload</h2>
-        <div class="upload-section">
-            <input type="file" id="pdfUpload" accept=".pdf">
-            <button id="uploadBtn">Upload</button>
-            <div id="uploadStatus"></div>
-        </div>
-        <hr>
-        <h2>💬 Conversations</h2>
-        <button id="newChatBtn">New Chat</button>
-        <div id="conversationsList"></div>
-    </div>
-    
-    <div class="main-content">
-        <div class="header">
-            <h1>Policy Chatbot</h1>
-            <button id="logoutBtn">🚪 Logout</button>
-        </div>
+    <div class="app-container">
+        <aside class="sidebar" role="complementary" aria-label="Sidebar navigation">
+            <header class="sidebar-header">
+                <h2>📄 PDF Upload</h2>
+            </header>
+            <section class="upload-section" aria-label="PDF upload section">
+                <input type="file" id="pdfUpload" accept=".pdf" aria-label="Select PDF file to upload">
+                <button id="uploadBtn" aria-label="Upload selected PDF">Upload</button>
+                <div id="uploadStatus" role="status" aria-live="polite" class="upload-status"></div>
+            </section>
+            <hr>
+            <header class="sidebar-header">
+                <h2>💬 Conversations</h2>
+            </header>
+            <section class="conversation-section" aria-label="Conversation management">
+                <button id="newChatBtn" aria-label="Start new conversation">New Chat</button>
+                <div id="conversationsList" role="list" aria-label="Conversation history"></div>
+            </section>
+        </aside>
         
-        <div class="chat-container">
-            <div id="welcomeScreen" class="welcome-screen">
-                <h3>Hello, how can I help you today?</h3>
-                <div class="pills" id="categoryPills">
-                    <button class="pill active" data-type="Any Query">Any Query</button>
-                    <button class="pill" data-type="Company Policies">Company Policies</button>
-                    <button class="pill" data-type="Leave Apply">Leave Apply</button>
-                    <button class="pill" data-type="Apply WFH">Apply WFH</button>
-                    <button class="pill" data-type="IT Ticket Raised">IT Ticket Raised</button>
-                    <button class="pill" data-type="HR Related Instructions">HR Related Instructions</button>
+        <main class="main-content" role="main">
+            <header class="header">
+                <h1>Policy Chatbot</h1>
+                <button id="logoutBtn" aria-label="Logout from application">🚪 Logout</button>
+            </header>
+            
+            <div class="chat-container">
+                <div id="welcomeScreen" class="welcome-screen" role="document">
+                    <h3>Hello, how can I help you today?</h3>
+                    <div class="pills" id="categoryPills" role="group" aria-label="Select query category">
+                        <button class="pill active" data-type="Any Query" aria-pressed="true" aria-label="Any Query category">Any Query</button>
+                        <button class="pill" data-type="Company Policies" aria-pressed="false" aria-label="Company Policies category">Company Policies</button>
+                        <button class="pill" data-type="Leave Apply" aria-pressed="false" aria-label="Leave Apply category">Leave Apply</button>
+                        <button class="pill" data-type="Apply WFH" aria-pressed="false" aria-label="Apply WFH category">Apply WFH</button>
+                        <button class="pill" data-type="IT Ticket Raised" aria-pressed="false" aria-label="IT Ticket Raised category">IT Ticket Raised</button>
+                        <button class="pill" data-type="HR Related Instructions" aria-pressed="false" aria-label="HR Related Instructions category">HR Related Instructions</button>
+                    </div>
+                    <div class="current-category">Currently assisting with: <strong id="currentCategoryText">Any Query</strong></div>
                 </div>
-                <div class="current-category">Currently assisting with: <strong id="currentCategoryText">Any Query</strong></div>
+                
+                <div id="chatHistory" class="chat-history" role="log" aria-live="polite" aria-label="Chat conversation"></div>
             </div>
             
-            <div id="chatHistory" class="chat-history"></div>
-            
-
-        </div>
-        
-        <div class="input-area">
-            <input type="text" id="chatInput" placeholder="Ask a query...">
-            <button id="sendBtn">Send</button>
-        </div>
+            <footer class="input-area">
+                <div class="input-container">
+                    <input type="text" id="chatInput" placeholder="Ask a query..." aria-label="Type your message" autocomplete="off">
+                    <button id="sendBtn" aria-label="Send message">Send</button>
+                </div>
+            </footer>
+        </main>
     </div>
+    
+    <div id="loadingOverlay" class="loading-overlay hidden" role="dialog" aria-modal="true" aria-label="Loading">
+        <div class="loading-spinner"></div>
+        <span class="loading-text">Processing...</span>
+    </div>
+    
+    <div id="errorToast" class="error-toast hidden" role="alert" aria-live="assertive">
+        <span class="error-message"></span>
+        <button class="error-close" aria-label="Close error message">×</button>
+    </div>
+    
     <script src="/static/app.js"></script>
 </body>
 </html>
