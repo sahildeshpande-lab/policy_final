@@ -1,0 +1,681 @@
+2026-03-18 16:01:26,339 - root - INFO - Logging configured successfully
+2026-03-18 16:01:33,164 - root - INFO - Logging configured successfully
+2026-03-18 16:01:34,636 - root - INFO - Logging configured successfully
+2026-03-18 16:01:54,354 - root - INFO - Logging configured successfully
+2026-03-18 16:02:32,397 - root - INFO - Logging configured successfully
+2026-03-18 16:04:46,027 - root - INFO - Logging configured successfully
+2026-03-18 16:10:34,015 - root - INFO - Logging configured successfully
+2026-03-18 16:12:58,591 - root - INFO - Logging configured successfully
+2026-03-18 16:13:45,323 - root - INFO - Logging configured successfully
+2026-03-18 16:14:49,297 - root - INFO - Logging configured successfully
+2026-03-18 16:14:51,047 - services.service_container - INFO - Initializing service container...
+2026-03-18 16:14:51,047 - services.service_container - INFO - Service container initialized successfully
+2026-03-18 16:14:51,162 - main - INFO - Starting up Policy Assistant API...
+2026-03-18 16:14:51,165 - repositories.database - INFO - Database tables created
+2026-03-18 16:14:51,166 - repositories.database - INFO - Database initialized successfully
+2026-03-18 16:14:51,167 - main - ERROR - Error during startup: 'ServiceContainer' object has no attribute 'VectorStoreService'
+2026-03-18 16:15:26,596 - root - INFO - Logging configured successfully
+2026-03-18 16:15:27,346 - services.service_container - INFO - Initializing service container...
+2026-03-18 16:15:27,346 - services.service_container - INFO - Service container initialized successfully
+2026-03-18 16:15:27,431 - main - INFO - Starting up Policy Assistant API...
+2026-03-18 16:15:27,434 - repositories.database - INFO - Database tables created
+2026-03-18 16:15:27,435 - repositories.database - INFO - Database initialized successfully
+2026-03-18 16:15:27,440 - faiss.loader - INFO - Loading faiss with AVX2 support.
+2026-03-18 16:15:27,479 - faiss.loader - INFO - Successfully loaded faiss with AVX2 support.
+2026-03-18 16:15:27,497 - langchain_community.vectorstores.faiss - WARNING - `embedding_function` is expected to be an Embeddings object, support for passing in a function will soon be removed.
+2026-03-18 16:15:27,498 - root - INFO - Vector database loaded from vector_db
+2026-03-18 16:15:27,498 - main - INFO - Policy Assistant API started successfully
+2026-03-18 16:15:27,500 - main - INFO - Shutting down Policy Assistant API...
+2026-03-18 16:15:27,506 - root - INFO - Vector database saved to vector_db
+2026-03-18 16:15:27,506 - main - INFO - Policy Assistant API shutdown complete
+2026-03-18 16:15:41,476 - root - INFO - Logging configured successfully
+2026-03-18 16:15:42,237 - services.service_container - INFO - Initializing service container...
+2026-03-18 16:15:42,237 - services.service_container - INFO - Service container initialized successfully
+2026-03-18 16:15:42,310 - main - INFO - Starting up Policy Assistant API...
+2026-03-18 16:15:42,312 - repositories.database - INFO - Database tables created
+2026-03-18 16:15:42,312 - repositories.database - INFO - Database initialized successfully
+2026-03-18 16:15:42,316 - faiss.loader - INFO - Loading faiss with AVX2 support.
+2026-03-18 16:15:42,346 - faiss.loader - INFO - Successfully loaded faiss with AVX2 support.
+2026-03-18 16:15:42,360 - langchain_community.vectorstores.faiss - WARNING - `embedding_function` is expected to be an Embeddings object, support for passing in a function will soon be removed.
+2026-03-18 16:15:42,360 - root - INFO - Vector database loaded from vector_db
+2026-03-18 16:15:42,360 - main - INFO - Policy Assistant API started successfully
+2026-03-18 16:23:52,424 - root - INFO - Logging configured successfully
+2026-03-18 16:23:53,295 - services.service_container - INFO - Initializing service container...
+2026-03-18 16:23:53,295 - services.service_container - INFO - Service container initialized successfully
+2026-03-18 16:23:53,310 - main - INFO - Starting up Policy Assistant API...
+2026-03-18 16:23:53,312 - repositories.database - INFO - Database tables created
+2026-03-18 16:23:53,313 - repositories.database - INFO - Database initialized successfully
+2026-03-18 16:23:53,317 - faiss.loader - INFO - Loading faiss with AVX2 support.
+2026-03-18 16:23:53,351 - faiss.loader - INFO - Successfully loaded faiss with AVX2 support.
+2026-03-18 16:23:53,365 - langchain_community.vectorstores.faiss - WARNING - `embedding_function` is expected to be an Embeddings object, support for passing in a function will soon be removed.
+2026-03-18 16:23:53,366 - root - INFO - Vector database loaded from vector_db
+2026-03-18 16:23:53,366 - main - INFO - Policy Assistant API started successfully
+2026-03-18 16:23:58,581 - api.middleware - INFO - Request started: GET / - Request ID: 1af5a63c-e8c0-4352-85c2-e9374600340a - Client: 127.0.0.1
+2026-03-18 16:23:58,584 - api.middleware - INFO - Request completed: GET / - Request ID: 1af5a63c-e8c0-4352-85c2-e9374600340a - Status: 200 - Time: 0.003s
+2026-03-18 16:23:58,655 - api.middleware - INFO - Request started: GET /favicon.ico - Request ID: 4f09a168-e387-45cf-8a63-99cbb64f1f3b - Client: 127.0.0.1
+2026-03-18 16:23:58,661 - api.middleware - INFO - Request completed: GET /favicon.ico - Request ID: 4f09a168-e387-45cf-8a63-99cbb64f1f3b - Status: 404 - Time: 0.006s
+2026-03-18 16:24:06,278 - api.middleware - INFO - Request started: GET /docs - Request ID: 7c53526c-b2dd-4a95-a509-356e28324eb5 - Client: 127.0.0.1
+2026-03-18 16:24:06,278 - api.middleware - INFO - Request completed: GET /docs - Request ID: 7c53526c-b2dd-4a95-a509-356e28324eb5 - Status: 200 - Time: 0.001s
+2026-03-18 16:24:06,540 - api.middleware - INFO - Request started: GET /openapi.json - Request ID: 6878e1f1-156f-4cf8-ba8c-e4365965cb60 - Client: 127.0.0.1
+2026-03-18 16:24:06,658 - api.middleware - INFO - Request completed: GET /openapi.json - Request ID: 6878e1f1-156f-4cf8-ba8c-e4365965cb60 - Status: 200 - Time: 0.118s
+2026-03-18 16:35:48,786 - root - INFO - Logging configured successfully
+2026-03-18 16:35:50,069 - services.service_container - INFO - Initializing service container...
+2026-03-18 16:35:50,069 - services.service_container - INFO - Service container initialized successfully
+2026-03-18 16:35:50,197 - main - INFO - Starting up Policy Assistant API...
+2026-03-18 16:35:50,200 - repositories.database - INFO - Database tables created
+2026-03-18 16:35:50,201 - repositories.database - INFO - Database initialized successfully
+2026-03-18 16:35:50,206 - faiss.loader - INFO - Loading faiss with AVX2 support.
+2026-03-18 16:35:50,272 - faiss.loader - INFO - Successfully loaded faiss with AVX2 support.
+2026-03-18 16:35:50,300 - langchain_community.vectorstores.faiss - WARNING - `embedding_function` is expected to be an Embeddings object, support for passing in a function will soon be removed.
+2026-03-18 16:35:50,301 - root - INFO - Vector database loaded from vector_db
+2026-03-18 16:35:50,301 - main - INFO - Policy Assistant API started successfully
+2026-03-18 16:35:50,303 - main - INFO - Shutting down Policy Assistant API...
+2026-03-18 16:35:50,313 - root - INFO - Vector database saved to vector_db
+2026-03-18 16:35:50,314 - main - INFO - Policy Assistant API shutdown complete
+2026-03-18 16:36:25,563 - root - INFO - Logging configured successfully
+2026-03-18 16:36:26,517 - services.service_container - INFO - Initializing service container...
+2026-03-18 16:36:26,518 - services.service_container - INFO - Service container initialized successfully
+2026-03-18 16:36:26,652 - main - INFO - Starting up Policy Assistant API...
+2026-03-18 16:36:26,695 - repositories.database - INFO - Database tables created
+2026-03-18 16:36:26,696 - repositories.database - INFO - Database initialized successfully
+2026-03-18 16:36:26,707 - faiss.loader - INFO - Loading faiss with AVX2 support.
+2026-03-18 16:36:26,758 - faiss.loader - INFO - Successfully loaded faiss with AVX2 support.
+2026-03-18 16:36:26,772 - langchain_community.vectorstores.faiss - WARNING - `embedding_function` is expected to be an Embeddings object, support for passing in a function will soon be removed.
+2026-03-18 16:36:26,773 - root - INFO - Vector database loaded from vector_db
+2026-03-18 16:36:26,773 - main - INFO - Policy Assistant API started successfully
+2026-03-18 16:36:41,675 - api.middleware - INFO - Request started: GET / - Request ID: dd845ecc-9ac0-4113-be08-841f8b54da40 - Client: 127.0.0.1
+2026-03-18 16:36:41,683 - api.middleware - INFO - Request completed: GET / - Request ID: dd845ecc-9ac0-4113-be08-841f8b54da40 - Status: 200 - Time: 0.007s
+2026-03-18 16:36:41,848 - api.middleware - INFO - Request started: GET /favicon.ico - Request ID: e1a2a6b5-8752-40ef-bc33-cbf5a731b8e4 - Client: 127.0.0.1
+2026-03-18 16:36:41,849 - api.middleware - INFO - Request completed: GET /favicon.ico - Request ID: e1a2a6b5-8752-40ef-bc33-cbf5a731b8e4 - Status: 404 - Time: 0.002s
+2026-03-18 16:36:56,676 - api.middleware - INFO - Request started: GET /api/v1/health - Request ID: e0c3d88d-76b0-4541-8aad-3bc6a0eeab8c - Client: 127.0.0.1
+2026-03-18 16:36:56,682 - api.middleware - INFO - Request completed: GET /api/v1/health - Request ID: e0c3d88d-76b0-4541-8aad-3bc6a0eeab8c - Status: 200 - Time: 0.008s
+2026-03-18 16:36:59,914 - api.middleware - INFO - Request started: GET /api/v1/health - Request ID: 634673ab-ed36-4062-90a5-e4ac691b51cc - Client: 127.0.0.1
+2026-03-18 16:36:59,916 - api.middleware - INFO - Request completed: GET /api/v1/health - Request ID: 634673ab-ed36-4062-90a5-e4ac691b51cc - Status: 200 - Time: 0.002s
+2026-03-18 16:37:11,137 - api.middleware - INFO - Request started: GET /api/v1/health - Request ID: 47328026-0aba-411c-a78d-aa09663f2bd1 - Client: 127.0.0.1
+2026-03-18 16:37:11,138 - api.middleware - INFO - Request completed: GET /api/v1/health - Request ID: 47328026-0aba-411c-a78d-aa09663f2bd1 - Status: 200 - Time: 0.001s
+2026-03-18 16:37:25,758 - root - INFO - Logging configured successfully
+2026-03-18 16:37:26,758 - services.service_container - INFO - Initializing service container...
+2026-03-18 16:37:26,758 - services.service_container - INFO - Service container initialized successfully
+2026-03-18 16:37:26,849 - main - INFO - Starting up Policy Assistant API...
+2026-03-18 16:37:26,850 - repositories.database - INFO - Database tables created
+2026-03-18 16:37:26,851 - repositories.database - INFO - Database initialized successfully
+2026-03-18 16:37:26,855 - faiss.loader - INFO - Loading faiss with AVX2 support.
+2026-03-18 16:37:26,893 - faiss.loader - INFO - Successfully loaded faiss with AVX2 support.
+2026-03-18 16:37:26,907 - langchain_community.vectorstores.faiss - WARNING - `embedding_function` is expected to be an Embeddings object, support for passing in a function will soon be removed.
+2026-03-18 16:37:26,907 - root - INFO - Vector database loaded from vector_db
+2026-03-18 16:37:26,907 - main - INFO - Policy Assistant API started successfully
+2026-03-18 16:37:35,470 - api.middleware - INFO - Request started: GET /api/v1/health - Request ID: a0dc46d0-1c33-446f-ae53-a7832caad33e - Client: 127.0.0.1
+2026-03-18 16:37:35,474 - api.middleware - INFO - Request completed: GET /api/v1/health - Request ID: a0dc46d0-1c33-446f-ae53-a7832caad33e - Status: 200 - Time: 0.004s
+2026-03-18 16:38:03,561 - root - INFO - Logging configured successfully
+2026-03-18 16:38:04,368 - services.service_container - INFO - Initializing service container...
+2026-03-18 16:38:04,369 - services.service_container - INFO - Service container initialized successfully
+2026-03-18 16:38:04,380 - main - INFO - Starting up Policy Assistant API...
+2026-03-18 16:38:04,383 - repositories.database - INFO - Database tables created
+2026-03-18 16:38:04,383 - repositories.database - INFO - Database initialized successfully
+2026-03-18 16:38:04,387 - faiss.loader - INFO - Loading faiss with AVX2 support.
+2026-03-18 16:38:04,423 - faiss.loader - INFO - Successfully loaded faiss with AVX2 support.
+2026-03-18 16:38:04,435 - langchain_community.vectorstores.faiss - WARNING - `embedding_function` is expected to be an Embeddings object, support for passing in a function will soon be removed.
+2026-03-18 16:38:04,436 - root - INFO - Vector database loaded from vector_db
+2026-03-18 16:38:04,436 - main - INFO - Policy Assistant API started successfully
+2026-03-18 16:38:04,438 - main - INFO - Shutting down Policy Assistant API...
+2026-03-18 16:38:04,443 - root - INFO - Vector database saved to vector_db
+2026-03-18 16:38:04,443 - main - INFO - Policy Assistant API shutdown complete
+2026-03-18 16:38:28,062 - root - INFO - Logging configured successfully
+2026-03-18 16:38:28,872 - services.service_container - INFO - Initializing service container...
+2026-03-18 16:38:28,873 - services.service_container - INFO - Service container initialized successfully
+2026-03-18 16:38:28,887 - main - INFO - Starting up Policy Assistant API...
+2026-03-18 16:38:28,889 - repositories.database - INFO - Database tables created
+2026-03-18 16:38:28,890 - repositories.database - INFO - Database initialized successfully
+2026-03-18 16:38:28,893 - faiss.loader - INFO - Loading faiss with AVX2 support.
+2026-03-18 16:38:28,932 - faiss.loader - INFO - Successfully loaded faiss with AVX2 support.
+2026-03-18 16:38:28,946 - langchain_community.vectorstores.faiss - WARNING - `embedding_function` is expected to be an Embeddings object, support for passing in a function will soon be removed.
+2026-03-18 16:38:28,946 - root - INFO - Vector database loaded from vector_db
+2026-03-18 16:38:28,946 - main - INFO - Policy Assistant API started successfully
+2026-03-18 16:38:32,679 - api.middleware - INFO - Request started: GET / - Request ID: 5a7d7403-d4e0-46c9-bdf2-3129bfd39fe0 - Client: 127.0.0.1
+2026-03-18 16:38:32,695 - api.middleware - INFO - Request completed: GET / - Request ID: 5a7d7403-d4e0-46c9-bdf2-3129bfd39fe0 - Status: 200 - Time: 0.016s
+2026-03-18 16:38:37,329 - api.middleware - INFO - Request started: GET / - Request ID: 9840cf29-2879-4908-ab4a-f525e35e17e7 - Client: 127.0.0.1
+2026-03-18 16:38:37,332 - api.middleware - INFO - Request completed: GET / - Request ID: 9840cf29-2879-4908-ab4a-f525e35e17e7 - Status: 200 - Time: 0.003s
+2026-03-18 16:38:37,436 - api.middleware - INFO - Request started: GET /favicon.ico - Request ID: f560cfbf-19a6-4971-b6a5-643a302cda26 - Client: 127.0.0.1
+2026-03-18 16:38:37,437 - api.middleware - INFO - Request completed: GET /favicon.ico - Request ID: f560cfbf-19a6-4971-b6a5-643a302cda26 - Status: 404 - Time: 0.002s
+2026-03-18 16:38:40,708 - api.middleware - INFO - Request started: GET / - Request ID: cf6da8d0-3d3f-4312-8a62-3fbc4a944c80 - Client: 127.0.0.1
+2026-03-18 16:38:40,710 - api.middleware - INFO - Request completed: GET / - Request ID: cf6da8d0-3d3f-4312-8a62-3fbc4a944c80 - Status: 200 - Time: 0.002s
+2026-03-18 16:39:28,255 - root - INFO - Logging configured successfully
+2026-03-18 16:39:29,070 - services.service_container - INFO - Initializing service container...
+2026-03-18 16:39:29,071 - services.service_container - INFO - Service container initialized successfully
+2026-03-18 16:39:29,084 - main - INFO - Starting up Policy Assistant API...
+2026-03-18 16:39:29,086 - repositories.database - INFO - Database tables created
+2026-03-18 16:39:29,086 - repositories.database - INFO - Database initialized successfully
+2026-03-18 16:39:29,091 - faiss.loader - INFO - Loading faiss with AVX2 support.
+2026-03-18 16:39:29,129 - faiss.loader - INFO - Successfully loaded faiss with AVX2 support.
+2026-03-18 16:39:29,141 - langchain_community.vectorstores.faiss - WARNING - `embedding_function` is expected to be an Embeddings object, support for passing in a function will soon be removed.
+2026-03-18 16:39:29,142 - root - INFO - Vector database loaded from vector_db
+2026-03-18 16:39:29,143 - main - INFO - Policy Assistant API started successfully
+2026-03-18 16:39:29,145 - main - INFO - Shutting down Policy Assistant API...
+2026-03-18 16:39:29,149 - root - INFO - Vector database saved to vector_db
+2026-03-18 16:39:29,149 - main - INFO - Policy Assistant API shutdown complete
+2026-03-18 17:50:23,176 - root - INFO - Logging configured successfully
+2026-03-18 17:50:25,879 - services.service_container - INFO - Initializing service container...
+2026-03-18 17:50:25,880 - services.service_container - INFO - Service container initialized successfully
+2026-03-18 17:50:25,903 - main - INFO - Starting up Policy Assistant API...
+2026-03-18 17:50:25,906 - repositories.database - INFO - Database tables created
+2026-03-18 17:50:25,907 - repositories.database - INFO - Database initialized successfully
+2026-03-18 17:50:25,916 - faiss.loader - INFO - Loading faiss with AVX2 support.
+2026-03-18 17:50:25,996 - faiss.loader - INFO - Successfully loaded faiss with AVX2 support.
+2026-03-18 17:50:26,022 - langchain_community.vectorstores.faiss - WARNING - `embedding_function` is expected to be an Embeddings object, support for passing in a function will soon be removed.
+2026-03-18 17:50:26,023 - root - INFO - Vector database loaded from vector_db
+2026-03-18 17:50:26,024 - main - INFO - Policy Assistant API started successfully
+2026-03-18 17:50:30,214 - api.middleware - INFO - Request started: GET / - Request ID: c3a96383-8462-4ade-b8b1-bfd74540b5e6 - Client: 127.0.0.1
+2026-03-18 17:50:30,233 - api.middleware - INFO - Request completed: GET / - Request ID: c3a96383-8462-4ade-b8b1-bfd74540b5e6 - Status: 200 - Time: 0.020s
+2026-03-18 17:57:58,924 - root - INFO - Logging configured successfully
+2026-03-18 17:57:59,619 - services.service_container - INFO - Initializing service container...
+2026-03-18 17:57:59,620 - services.service_container - INFO - Service container initialized successfully
+2026-03-18 17:57:59,629 - main - INFO - Starting up Policy Assistant API...
+2026-03-18 17:57:59,631 - repositories.database - INFO - Database tables created
+2026-03-18 17:57:59,631 - repositories.database - INFO - Database initialized successfully
+2026-03-18 17:57:59,634 - faiss.loader - INFO - Loading faiss with AVX2 support.
+2026-03-18 17:57:59,666 - faiss.loader - INFO - Successfully loaded faiss with AVX2 support.
+2026-03-18 17:57:59,676 - langchain_community.vectorstores.faiss - WARNING - `embedding_function` is expected to be an Embeddings object, support for passing in a function will soon be removed.
+2026-03-18 17:57:59,676 - root - INFO - Vector database loaded from vector_db
+2026-03-18 17:57:59,678 - main - INFO - Policy Assistant API started successfully
+2026-03-18 17:58:20,347 - api.middleware - INFO - Request started: GET / - Request ID: d4b77ba2-b41f-4405-aac0-7543bfb2960f - Client: 127.0.0.1
+2026-03-18 17:58:20,353 - api.middleware - INFO - Request completed: GET / - Request ID: d4b77ba2-b41f-4405-aac0-7543bfb2960f - Status: 200 - Time: 0.007s
+2026-03-18 18:00:07,957 - api.middleware - INFO - Request started: GET / - Request ID: 8d60159b-8475-45b5-a5c8-3154550b51a3 - Client: 127.0.0.1
+2026-03-18 18:00:07,959 - api.middleware - INFO - Request completed: GET / - Request ID: 8d60159b-8475-45b5-a5c8-3154550b51a3 - Status: 200 - Time: 0.003s
+2026-03-18 18:00:10,523 - api.middleware - INFO - Request started: GET /docs - Request ID: eb9f01ba-8f67-40ac-b2be-c2e0d1618406 - Client: 127.0.0.1
+2026-03-18 18:00:10,525 - api.middleware - INFO - Request completed: GET /docs - Request ID: eb9f01ba-8f67-40ac-b2be-c2e0d1618406 - Status: 200 - Time: 0.002s
+2026-03-18 18:00:10,740 - api.middleware - INFO - Request started: GET /openapi.json - Request ID: ad8d2fc1-486b-4db2-b38c-c5d875c4ea90 - Client: 127.0.0.1
+2026-03-18 18:00:10,825 - api.middleware - INFO - Request completed: GET /openapi.json - Request ID: ad8d2fc1-486b-4db2-b38c-c5d875c4ea90 - Status: 200 - Time: 0.085s
+2026-03-18 18:00:35,184 - api.middleware - INFO - Request started: GET /docs - Request ID: 01ea9e52-33bd-43bc-ae8c-85d7bc2082b0 - Client: 127.0.0.1
+2026-03-18 18:00:35,187 - api.middleware - INFO - Request completed: GET /docs - Request ID: 01ea9e52-33bd-43bc-ae8c-85d7bc2082b0 - Status: 200 - Time: 0.002s
+2026-03-18 18:00:35,412 - api.middleware - INFO - Request started: GET /openapi.json - Request ID: c6de5ab1-c136-4ad1-8725-1e68fcbc1b6d - Client: 127.0.0.1
+2026-03-18 18:00:35,413 - api.middleware - INFO - Request completed: GET /openapi.json - Request ID: c6de5ab1-c136-4ad1-8725-1e68fcbc1b6d - Status: 200 - Time: 0.001s
+2026-03-18 18:03:18,632 - api.middleware - INFO - Request started: GET /api/v1/conversations - Request ID: f38552ce-6cb5-4007-ac50-0f1079b032a7 - Client: 127.0.0.1
+2026-03-18 18:03:18,633 - services.conversation_service - INFO - Database conversation service initialized
+2026-03-18 18:03:18,637 - services.conversation_service - INFO - Database conversation service initialized
+2026-03-18 18:03:18,642 - api.middleware - INFO - Request completed: GET /api/v1/conversations - Request ID: f38552ce-6cb5-4007-ac50-0f1079b032a7 - Status: 200 - Time: 0.010s
+2026-03-18 18:03:23,344 - api.middleware - INFO - Request started: GET /api/v1/conversations - Request ID: bce7a332-3f14-4776-b08d-75c88c88c826 - Client: 127.0.0.1
+2026-03-18 18:03:23,346 - services.conversation_service - INFO - Database conversation service initialized
+2026-03-18 18:03:23,348 - services.conversation_service - INFO - Database conversation service initialized
+2026-03-18 18:03:23,350 - api.middleware - INFO - Request completed: GET /api/v1/conversations - Request ID: bce7a332-3f14-4776-b08d-75c88c88c826 - Status: 200 - Time: 0.006s
+2026-03-18 18:03:26,359 - api.middleware - INFO - Request started: OPTIONS /api/v1/chat - Request ID: d1cdd6bb-5cd9-4909-b034-8ee6d3ef00d8 - Client: 127.0.0.1
+2026-03-18 18:03:26,360 - api.middleware - INFO - Request completed: OPTIONS /api/v1/chat - Request ID: d1cdd6bb-5cd9-4909-b034-8ee6d3ef00d8 - Status: 200 - Time: 0.001s
+2026-03-18 18:03:26,366 - api.middleware - INFO - Request started: POST /api/v1/chat - Request ID: 9d780cbe-8a83-44d0-b737-976921a7d12d - Client: 127.0.0.1
+2026-03-18 18:03:26,374 - services.conversation_service - INFO - Database conversation service initialized
+2026-03-18 18:03:26,377 - api.routes_main - ERROR - Unexpected error in chat: 'ServiceContainer' object has no attribute 'QueryService'
+2026-03-18 18:03:26,378 - api.middleware - INFO - Request completed: POST /api/v1/chat - Request ID: 9d780cbe-8a83-44d0-b737-976921a7d12d - Status: 500 - Time: 0.012s
+2026-03-18 18:04:42,409 - root - INFO - Logging configured successfully
+2026-03-18 18:04:43,081 - services.service_container - INFO - Initializing service container...
+2026-03-18 18:04:43,081 - services.service_container - INFO - Service container initialized successfully
+2026-03-18 18:04:43,092 - main - INFO - Starting up Policy Assistant API...
+2026-03-18 18:04:43,093 - repositories.database - INFO - Database tables created
+2026-03-18 18:04:43,094 - repositories.database - INFO - Database initialized successfully
+2026-03-18 18:04:43,097 - faiss.loader - INFO - Loading faiss with AVX2 support.
+2026-03-18 18:04:43,126 - faiss.loader - INFO - Successfully loaded faiss with AVX2 support.
+2026-03-18 18:04:43,138 - langchain_community.vectorstores.faiss - WARNING - `embedding_function` is expected to be an Embeddings object, support for passing in a function will soon be removed.
+2026-03-18 18:04:43,138 - root - INFO - Vector database loaded from vector_db
+2026-03-18 18:04:43,138 - main - INFO - Policy Assistant API started successfully
+2026-03-18 18:08:17,468 - root - INFO - Logging configured successfully
+2026-03-18 18:08:18,132 - services.service_container - INFO - Initializing service container...
+2026-03-18 18:08:18,132 - services.service_container - INFO - Service container initialized successfully
+2026-03-18 18:08:18,142 - main - INFO - Starting up Policy Assistant API...
+2026-03-18 18:08:18,144 - repositories.database - INFO - Database tables created
+2026-03-18 18:08:18,144 - repositories.database - INFO - Database initialized successfully
+2026-03-18 18:08:18,149 - faiss.loader - INFO - Loading faiss with AVX2 support.
+2026-03-18 18:08:18,178 - faiss.loader - INFO - Successfully loaded faiss with AVX2 support.
+2026-03-18 18:08:18,189 - langchain_community.vectorstores.faiss - WARNING - `embedding_function` is expected to be an Embeddings object, support for passing in a function will soon be removed.
+2026-03-18 18:08:18,190 - root - INFO - Vector database loaded from vector_db
+2026-03-18 18:08:18,190 - main - INFO - Policy Assistant API started successfully
+2026-03-18 18:08:26,187 - api.middleware - INFO - Request started: GET / - Request ID: 3d0f75f9-184e-4491-aa91-ea30fc2d3e81 - Client: 127.0.0.1
+2026-03-18 18:08:26,190 - api.middleware - INFO - Request completed: GET / - Request ID: 3d0f75f9-184e-4491-aa91-ea30fc2d3e81 - Status: 404 - Time: 0.003s
+2026-03-18 18:08:26,254 - api.middleware - INFO - Request started: GET /favicon.ico - Request ID: d94aa643-c2bf-4dce-ba2d-020afbb7b42e - Client: 127.0.0.1
+2026-03-18 18:08:26,256 - api.middleware - INFO - Request completed: GET /favicon.ico - Request ID: d94aa643-c2bf-4dce-ba2d-020afbb7b42e - Status: 404 - Time: 0.004s
+2026-03-18 18:08:31,742 - api.middleware - INFO - Request started: GET /api/v1/conversations - Request ID: c7e0a06c-b97a-4aff-9179-27b3ced15be0 - Client: 127.0.0.1
+2026-03-18 18:08:31,746 - services.conversation_service - INFO - Database conversation service initialized
+2026-03-18 18:08:31,748 - services.conversation_service - INFO - Database conversation service initialized
+2026-03-18 18:08:31,752 - api.middleware - INFO - Request completed: GET /api/v1/conversations - Request ID: c7e0a06c-b97a-4aff-9179-27b3ced15be0 - Status: 200 - Time: 0.010s
+2026-03-18 18:08:48,836 - api.middleware - INFO - Request started: OPTIONS /api/v1/chat - Request ID: 006437fe-df3e-463a-9a2b-a56d6043bdb2 - Client: 127.0.0.1
+2026-03-18 18:08:48,837 - api.middleware - INFO - Request completed: OPTIONS /api/v1/chat - Request ID: 006437fe-df3e-463a-9a2b-a56d6043bdb2 - Status: 200 - Time: 0.001s
+2026-03-18 18:08:48,841 - api.middleware - INFO - Request started: POST /api/v1/chat - Request ID: 5892350e-ad34-4059-acef-2e620835ae65 - Client: 127.0.0.1
+2026-03-18 18:08:48,845 - services.conversation_service - INFO - Database conversation service initialized
+2026-03-18 18:08:48,847 - api.routes_main - ERROR - Unexpected error in chat: 'ServiceContainer' object has no attribute 'QueryService'
+2026-03-18 18:08:48,848 - api.middleware - INFO - Request completed: POST /api/v1/chat - Request ID: 5892350e-ad34-4059-acef-2e620835ae65 - Status: 500 - Time: 0.007s
+2026-03-18 18:12:17,761 - root - INFO - Logging configured successfully
+2026-03-18 18:12:18,437 - services.service_container - INFO - Initializing service container...
+2026-03-18 18:12:18,437 - services.service_container - INFO - Service container initialized successfully
+2026-03-18 18:12:18,446 - main - INFO - Starting up Policy Assistant API...
+2026-03-18 18:12:18,448 - repositories.database - INFO - Database tables created
+2026-03-18 18:12:18,448 - repositories.database - INFO - Database initialized successfully
+2026-03-18 18:12:18,452 - faiss.loader - INFO - Loading faiss with AVX2 support.
+2026-03-18 18:12:18,484 - faiss.loader - INFO - Successfully loaded faiss with AVX2 support.
+2026-03-18 18:12:18,497 - langchain_community.vectorstores.faiss - WARNING - `embedding_function` is expected to be an Embeddings object, support for passing in a function will soon be removed.
+2026-03-18 18:12:18,498 - root - INFO - Vector database loaded from vector_db
+2026-03-18 18:12:18,498 - main - INFO - Policy Assistant API started successfully
+2026-03-18 18:12:25,182 - api.middleware - INFO - Request started: GET /api/v1/conversations - Request ID: c14c17e4-d44f-4617-9c7b-f989b6cf0a9c - Client: 127.0.0.1
+2026-03-18 18:12:25,185 - services.conversation_service - INFO - Database conversation service initialized
+2026-03-18 18:12:25,188 - services.conversation_service - INFO - Database conversation service initialized
+2026-03-18 18:12:25,191 - api.middleware - INFO - Request completed: GET /api/v1/conversations - Request ID: c14c17e4-d44f-4617-9c7b-f989b6cf0a9c - Status: 200 - Time: 0.009s
+2026-03-18 18:12:37,660 - api.middleware - INFO - Request started: GET /api/v1/conversations - Request ID: 8ced8153-5001-4f5b-8650-4e8588531a8f - Client: 127.0.0.1
+2026-03-18 18:12:37,660 - services.conversation_service - INFO - Database conversation service initialized
+2026-03-18 18:12:37,661 - services.conversation_service - INFO - Database conversation service initialized
+2026-03-18 18:12:37,664 - api.middleware - INFO - Request completed: GET /api/v1/conversations - Request ID: 8ced8153-5001-4f5b-8650-4e8588531a8f - Status: 200 - Time: 0.005s
+2026-03-18 18:15:51,349 - api.middleware - INFO - Request started: GET /api/v1//conversations - Request ID: 3f730c50-9628-489d-8cb7-b0681295fb1d - Client: 127.0.0.1
+2026-03-18 18:15:51,362 - api.middleware - INFO - Request completed: GET /api/v1//conversations - Request ID: 3f730c50-9628-489d-8cb7-b0681295fb1d - Status: 404 - Time: 0.013s
+2026-03-18 18:15:53,413 - api.middleware - INFO - Request started: GET /api/v1//conversations - Request ID: 24d4f611-735b-4d51-be95-9d75b8b79000 - Client: 127.0.0.1
+2026-03-18 18:15:53,414 - api.middleware - INFO - Request completed: GET /api/v1//conversations - Request ID: 24d4f611-735b-4d51-be95-9d75b8b79000 - Status: 404 - Time: 0.002s
+2026-03-18 18:17:13,559 - api.middleware - INFO - Request started: GET /api/v1/conversations - Request ID: 62176e6d-b6d8-4953-98a4-3d22a7cdce62 - Client: 127.0.0.1
+2026-03-18 18:17:13,560 - services.conversation_service - INFO - Database conversation service initialized
+2026-03-18 18:17:13,562 - services.conversation_service - INFO - Database conversation service initialized
+2026-03-18 18:17:13,564 - api.middleware - INFO - Request completed: GET /api/v1/conversations - Request ID: 62176e6d-b6d8-4953-98a4-3d22a7cdce62 - Status: 200 - Time: 0.004s
+2026-03-18 18:17:43,752 - main - INFO - Shutting down Policy Assistant API...
+2026-03-18 18:17:43,763 - root - INFO - Vector database saved to vector_db
+2026-03-18 18:17:43,764 - main - INFO - Policy Assistant API shutdown complete
+2026-03-18 18:17:54,534 - root - INFO - Logging configured successfully
+2026-03-18 18:17:55,201 - services.service_container - INFO - Initializing service container...
+2026-03-18 18:17:55,201 - services.service_container - INFO - Service container initialized successfully
+2026-03-18 18:17:55,209 - main - INFO - Starting up Policy Assistant API...
+2026-03-18 18:17:55,211 - repositories.database - INFO - Database tables created
+2026-03-18 18:17:55,213 - repositories.database - INFO - Database initialized successfully
+2026-03-18 18:17:55,215 - faiss.loader - INFO - Loading faiss with AVX2 support.
+2026-03-18 18:17:55,249 - faiss.loader - INFO - Successfully loaded faiss with AVX2 support.
+2026-03-18 18:17:55,259 - langchain_community.vectorstores.faiss - WARNING - `embedding_function` is expected to be an Embeddings object, support for passing in a function will soon be removed.
+2026-03-18 18:17:55,259 - root - INFO - Vector database loaded from vector_db
+2026-03-18 18:17:55,259 - main - INFO - Policy Assistant API started successfully
+2026-03-18 18:18:06,254 - api.middleware - INFO - Request started: GET /api/v1//conversations - Request ID: 368a8b76-2704-4f47-b87d-d93487ea699b - Client: 127.0.0.1
+2026-03-18 18:18:06,255 - api.middleware - INFO - Request completed: GET /api/v1//conversations - Request ID: 368a8b76-2704-4f47-b87d-d93487ea699b - Status: 404 - Time: 0.001s
+2026-03-18 18:18:17,469 - api.middleware - INFO - Request started: GET /api/v1//conversations - Request ID: eb923294-e1ca-43f1-ae86-31e5f63176c1 - Client: 127.0.0.1
+2026-03-18 18:18:17,470 - api.middleware - INFO - Request completed: GET /api/v1//conversations - Request ID: eb923294-e1ca-43f1-ae86-31e5f63176c1 - Status: 404 - Time: 0.001s
+2026-03-18 18:19:29,544 - root - INFO - Logging configured successfully
+2026-03-18 18:19:30,359 - services.service_container - INFO - Initializing service container...
+2026-03-18 18:19:30,359 - services.service_container - INFO - Service container initialized successfully
+2026-03-18 18:19:30,457 - main - INFO - Starting up Policy Assistant API...
+2026-03-18 18:19:30,459 - repositories.database - INFO - Database tables created
+2026-03-18 18:19:30,460 - repositories.database - INFO - Database initialized successfully
+2026-03-18 18:19:30,464 - faiss.loader - INFO - Loading faiss with AVX2 support.
+2026-03-18 18:19:30,499 - faiss.loader - INFO - Successfully loaded faiss with AVX2 support.
+2026-03-18 18:19:30,512 - langchain_community.vectorstores.faiss - WARNING - `embedding_function` is expected to be an Embeddings object, support for passing in a function will soon be removed.
+2026-03-18 18:19:30,513 - root - INFO - Vector database loaded from vector_db
+2026-03-18 18:19:30,513 - main - INFO - Policy Assistant API started successfully
+2026-03-18 18:19:30,514 - main - INFO - Shutting down Policy Assistant API...
+2026-03-18 18:19:30,518 - root - INFO - Vector database saved to vector_db
+2026-03-18 18:19:30,518 - main - INFO - Policy Assistant API shutdown complete
+2026-03-18 18:20:03,727 - root - INFO - Logging configured successfully
+2026-03-18 18:20:04,587 - services.service_container - INFO - Initializing service container...
+2026-03-18 18:20:04,587 - services.service_container - INFO - Service container initialized successfully
+2026-03-18 18:20:04,664 - main - INFO - Starting up Policy Assistant API...
+2026-03-18 18:20:04,667 - repositories.database - INFO - Database tables created
+2026-03-18 18:20:04,668 - repositories.database - INFO - Database initialized successfully
+2026-03-18 18:20:04,671 - faiss.loader - INFO - Loading faiss with AVX2 support.
+2026-03-18 18:20:04,700 - faiss.loader - INFO - Successfully loaded faiss with AVX2 support.
+2026-03-18 18:20:04,713 - langchain_community.vectorstores.faiss - WARNING - `embedding_function` is expected to be an Embeddings object, support for passing in a function will soon be removed.
+2026-03-18 18:20:04,713 - root - INFO - Vector database loaded from vector_db
+2026-03-18 18:20:04,713 - main - INFO - Policy Assistant API started successfully
+2026-03-18 18:20:04,714 - main - INFO - Shutting down Policy Assistant API...
+2026-03-18 18:20:04,719 - root - INFO - Vector database saved to vector_db
+2026-03-18 18:20:04,719 - main - INFO - Policy Assistant API shutdown complete
+2026-03-18 18:20:21,500 - root - INFO - Logging configured successfully
+2026-03-18 18:20:22,355 - services.service_container - INFO - Initializing service container...
+2026-03-18 18:20:22,355 - services.service_container - INFO - Service container initialized successfully
+2026-03-18 18:20:22,444 - main - INFO - Starting up Policy Assistant API...
+2026-03-18 18:20:22,446 - repositories.database - INFO - Database tables created
+2026-03-18 18:20:22,447 - repositories.database - INFO - Database initialized successfully
+2026-03-18 18:20:22,450 - faiss.loader - INFO - Loading faiss with AVX2 support.
+2026-03-18 18:20:22,493 - faiss.loader - INFO - Successfully loaded faiss with AVX2 support.
+2026-03-18 18:20:22,509 - langchain_community.vectorstores.faiss - WARNING - `embedding_function` is expected to be an Embeddings object, support for passing in a function will soon be removed.
+2026-03-18 18:20:22,509 - root - INFO - Vector database loaded from vector_db
+2026-03-18 18:20:22,511 - main - INFO - Policy Assistant API started successfully
+2026-03-18 18:20:35,269 - api.middleware - INFO - Request started: GET /api/v1/health - Request ID: 1f1a44dd-24f1-4dc4-8302-3857f84ac8d3 - Client: 127.0.0.1
+2026-03-18 18:20:35,271 - api.middleware - INFO - Request completed: GET /api/v1/health - Request ID: 1f1a44dd-24f1-4dc4-8302-3857f84ac8d3 - Status: 200 - Time: 0.002s
+2026-03-18 18:20:37,302 - api.middleware - INFO - Request started: GET /api/v1/health - Request ID: 6d131103-c4a5-4c97-a22c-545b4a6560ab - Client: 127.0.0.1
+2026-03-18 18:20:37,302 - api.middleware - INFO - Request completed: GET /api/v1/health - Request ID: 6d131103-c4a5-4c97-a22c-545b4a6560ab - Status: 200 - Time: 0.000s
+2026-03-18 18:20:40,016 - api.middleware - INFO - Request started: GET /api/v1/health - Request ID: 5548d3a6-290a-41ed-8a1a-5db4e6c38484 - Client: 127.0.0.1
+2026-03-18 18:20:40,017 - api.middleware - INFO - Request completed: GET /api/v1/health - Request ID: 5548d3a6-290a-41ed-8a1a-5db4e6c38484 - Status: 200 - Time: 0.001s
+2026-03-18 18:21:14,112 - root - INFO - Logging configured successfully
+2026-03-18 18:21:15,116 - services.service_container - INFO - Initializing service container...
+2026-03-18 18:21:15,116 - services.service_container - INFO - Service container initialized successfully
+2026-03-18 18:21:15,137 - main - INFO - Starting up Policy Assistant API...
+2026-03-18 18:21:15,140 - repositories.database - INFO - Database tables created
+2026-03-18 18:21:15,140 - repositories.database - INFO - Database initialized successfully
+2026-03-18 18:21:15,146 - faiss.loader - INFO - Loading faiss with AVX2 support.
+2026-03-18 18:21:15,214 - faiss.loader - INFO - Successfully loaded faiss with AVX2 support.
+2026-03-18 18:21:15,238 - langchain_community.vectorstores.faiss - WARNING - `embedding_function` is expected to be an Embeddings object, support for passing in a function will soon be removed.
+2026-03-18 18:21:15,240 - root - INFO - Vector database loaded from vector_db
+2026-03-18 18:21:15,241 - main - INFO - Policy Assistant API started successfully
+2026-03-18 18:21:15,243 - main - INFO - Shutting down Policy Assistant API...
+2026-03-18 18:21:15,248 - root - INFO - Vector database saved to vector_db
+2026-03-18 18:21:15,250 - main - INFO - Policy Assistant API shutdown complete
+2026-03-18 18:22:00,982 - root - INFO - Logging configured successfully
+2026-03-18 18:22:01,921 - services.service_container - INFO - Initializing service container...
+2026-03-18 18:22:01,921 - services.service_container - INFO - Service container initialized successfully
+2026-03-18 18:22:02,004 - main - INFO - Starting up Policy Assistant API...
+2026-03-18 18:22:02,006 - repositories.database - INFO - Database tables created
+2026-03-18 18:22:02,006 - repositories.database - INFO - Database initialized successfully
+2026-03-18 18:22:02,009 - faiss.loader - INFO - Loading faiss with AVX2 support.
+2026-03-18 18:22:02,045 - faiss.loader - INFO - Successfully loaded faiss with AVX2 support.
+2026-03-18 18:22:02,059 - langchain_community.vectorstores.faiss - WARNING - `embedding_function` is expected to be an Embeddings object, support for passing in a function will soon be removed.
+2026-03-18 18:22:02,060 - root - INFO - Vector database loaded from vector_db
+2026-03-18 18:22:02,060 - main - INFO - Policy Assistant API started successfully
+2026-03-18 18:22:48,807 - root - INFO - Logging configured successfully
+2026-03-18 18:22:49,600 - services.service_container - INFO - Initializing service container...
+2026-03-18 18:22:49,600 - services.service_container - INFO - Service container initialized successfully
+2026-03-18 18:22:49,611 - main - INFO - Starting up Policy Assistant API...
+2026-03-18 18:22:49,613 - repositories.database - INFO - Database tables created
+2026-03-18 18:22:49,614 - repositories.database - INFO - Database initialized successfully
+2026-03-18 18:22:49,616 - faiss.loader - INFO - Loading faiss with AVX2 support.
+2026-03-18 18:22:49,650 - faiss.loader - INFO - Successfully loaded faiss with AVX2 support.
+2026-03-18 18:22:49,661 - langchain_community.vectorstores.faiss - WARNING - `embedding_function` is expected to be an Embeddings object, support for passing in a function will soon be removed.
+2026-03-18 18:22:49,662 - root - INFO - Vector database loaded from vector_db
+2026-03-18 18:22:49,662 - main - INFO - Policy Assistant API started successfully
+2026-03-18 18:22:49,663 - main - INFO - Shutting down Policy Assistant API...
+2026-03-18 18:22:49,667 - root - INFO - Vector database saved to vector_db
+2026-03-18 18:22:49,668 - main - INFO - Policy Assistant API shutdown complete
+2026-03-18 18:23:06,971 - root - INFO - Logging configured successfully
+2026-03-18 18:23:07,645 - services.service_container - INFO - Initializing service container...
+2026-03-18 18:23:07,645 - services.service_container - INFO - Service container initialized successfully
+2026-03-18 18:23:07,655 - main - INFO - Starting up Policy Assistant API...
+2026-03-18 18:23:07,657 - repositories.database - INFO - Database tables created
+2026-03-18 18:23:07,657 - repositories.database - INFO - Database initialized successfully
+2026-03-18 18:23:07,660 - faiss.loader - INFO - Loading faiss with AVX2 support.
+2026-03-18 18:23:07,690 - faiss.loader - INFO - Successfully loaded faiss with AVX2 support.
+2026-03-18 18:23:07,702 - langchain_community.vectorstores.faiss - WARNING - `embedding_function` is expected to be an Embeddings object, support for passing in a function will soon be removed.
+2026-03-18 18:23:07,702 - root - INFO - Vector database loaded from vector_db
+2026-03-18 18:23:07,702 - main - INFO - Policy Assistant API started successfully
+2026-03-18 18:23:07,705 - main - INFO - Shutting down Policy Assistant API...
+2026-03-18 18:23:07,711 - root - INFO - Vector database saved to vector_db
+2026-03-18 18:23:07,711 - main - INFO - Policy Assistant API shutdown complete
+2026-03-18 18:23:39,744 - root - INFO - Logging configured successfully
+2026-03-18 18:23:40,511 - services.service_container - INFO - Initializing service container...
+2026-03-18 18:23:40,511 - services.service_container - INFO - Service container initialized successfully
+2026-03-18 18:23:40,522 - main - INFO - Starting up Policy Assistant API...
+2026-03-18 18:23:40,524 - repositories.database - INFO - Database tables created
+2026-03-18 18:23:40,524 - repositories.database - INFO - Database initialized successfully
+2026-03-18 18:23:40,527 - faiss.loader - INFO - Loading faiss with AVX2 support.
+2026-03-18 18:23:40,558 - faiss.loader - INFO - Successfully loaded faiss with AVX2 support.
+2026-03-18 18:23:40,574 - langchain_community.vectorstores.faiss - WARNING - `embedding_function` is expected to be an Embeddings object, support for passing in a function will soon be removed.
+2026-03-18 18:23:40,574 - root - INFO - Vector database loaded from vector_db
+2026-03-18 18:23:40,574 - main - INFO - Policy Assistant API started successfully
+2026-03-18 18:23:40,575 - main - INFO - Shutting down Policy Assistant API...
+2026-03-18 18:23:40,579 - root - INFO - Vector database saved to vector_db
+2026-03-18 18:23:40,580 - main - INFO - Policy Assistant API shutdown complete
+2026-03-18 18:24:21,650 - root - INFO - Logging configured successfully
+2026-03-18 18:24:22,325 - services.service_container - INFO - Initializing service container...
+2026-03-18 18:24:22,325 - services.service_container - INFO - Service container initialized successfully
+2026-03-18 18:24:22,335 - main - INFO - Starting up Policy Assistant API...
+2026-03-18 18:24:22,336 - repositories.database - INFO - Database tables created
+2026-03-18 18:24:22,337 - repositories.database - INFO - Database initialized successfully
+2026-03-18 18:24:22,340 - faiss.loader - INFO - Loading faiss with AVX2 support.
+2026-03-18 18:24:22,370 - faiss.loader - INFO - Successfully loaded faiss with AVX2 support.
+2026-03-18 18:24:22,381 - langchain_community.vectorstores.faiss - WARNING - `embedding_function` is expected to be an Embeddings object, support for passing in a function will soon be removed.
+2026-03-18 18:24:22,381 - root - INFO - Vector database loaded from vector_db
+2026-03-18 18:24:22,383 - main - INFO - Policy Assistant API started successfully
+2026-03-18 18:24:22,383 - main - INFO - Shutting down Policy Assistant API...
+2026-03-18 18:24:22,387 - root - INFO - Vector database saved to vector_db
+2026-03-18 18:24:22,387 - main - INFO - Policy Assistant API shutdown complete
+2026-03-18 18:24:37,909 - root - INFO - Logging configured successfully
+2026-03-18 18:24:38,575 - services.service_container - INFO - Initializing service container...
+2026-03-18 18:24:38,575 - services.service_container - INFO - Service container initialized successfully
+2026-03-18 18:24:38,584 - main - INFO - Starting up Policy Assistant API...
+2026-03-18 18:24:38,586 - repositories.database - INFO - Database tables created
+2026-03-18 18:24:38,587 - repositories.database - INFO - Database initialized successfully
+2026-03-18 18:24:38,589 - faiss.loader - INFO - Loading faiss with AVX2 support.
+2026-03-18 18:24:38,618 - faiss.loader - INFO - Successfully loaded faiss with AVX2 support.
+2026-03-18 18:24:38,657 - langchain_community.vectorstores.faiss - WARNING - `embedding_function` is expected to be an Embeddings object, support for passing in a function will soon be removed.
+2026-03-18 18:24:38,658 - root - INFO - Vector database loaded from vector_db
+2026-03-18 18:24:38,658 - main - INFO - Policy Assistant API started successfully
+2026-03-18 18:25:10,381 - api.middleware - INFO - Request started: GET /api/v1//conversations - Request ID: 41a3a2d8-e503-4f2f-ad98-c5972ba416a2 - Client: 127.0.0.1
+2026-03-18 18:25:10,384 - api.middleware - INFO - Request completed: GET /api/v1//conversations - Request ID: 41a3a2d8-e503-4f2f-ad98-c5972ba416a2 - Status: 404 - Time: 0.003s
+2026-03-18 18:25:12,302 - api.middleware - INFO - Request started: GET /api/v1//conversations - Request ID: 25ae529b-e702-41b6-8e40-db50ce29a41d - Client: 127.0.0.1
+2026-03-18 18:25:12,304 - api.middleware - INFO - Request completed: GET /api/v1//conversations - Request ID: 25ae529b-e702-41b6-8e40-db50ce29a41d - Status: 404 - Time: 0.002s
+2026-03-18 18:25:12,588 - api.middleware - INFO - Request started: GET /api/v1//conversations - Request ID: 94e750d5-e905-49f1-a429-3d750247dc2b - Client: 127.0.0.1
+2026-03-18 18:25:12,590 - api.middleware - INFO - Request completed: GET /api/v1//conversations - Request ID: 94e750d5-e905-49f1-a429-3d750247dc2b - Status: 404 - Time: 0.002s
+2026-03-18 18:25:12,738 - api.middleware - INFO - Request started: GET /api/v1//conversations - Request ID: 510211a5-bdbd-419b-a1a0-231dff1ef22c - Client: 127.0.0.1
+2026-03-18 18:25:12,740 - api.middleware - INFO - Request completed: GET /api/v1//conversations - Request ID: 510211a5-bdbd-419b-a1a0-231dff1ef22c - Status: 404 - Time: 0.002s
+2026-03-18 18:25:12,921 - api.middleware - INFO - Request started: GET /api/v1//conversations - Request ID: 7ee64f42-8275-4d7c-a3ca-071acd20206c - Client: 127.0.0.1
+2026-03-18 18:25:12,921 - api.middleware - INFO - Request completed: GET /api/v1//conversations - Request ID: 7ee64f42-8275-4d7c-a3ca-071acd20206c - Status: 404 - Time: 0.000s
+2026-03-18 18:25:13,073 - api.middleware - INFO - Request started: GET /api/v1//conversations - Request ID: 67b0ba7b-e698-48d6-9d24-306cff1c28c7 - Client: 127.0.0.1
+2026-03-18 18:25:13,074 - api.middleware - INFO - Request completed: GET /api/v1//conversations - Request ID: 67b0ba7b-e698-48d6-9d24-306cff1c28c7 - Status: 404 - Time: 0.001s
+2026-03-18 18:25:13,325 - api.middleware - INFO - Request started: GET /api/v1//conversations - Request ID: 541e86dd-59d3-4b4a-bd7d-7ea33471f04c - Client: 127.0.0.1
+2026-03-18 18:25:13,326 - api.middleware - INFO - Request completed: GET /api/v1//conversations - Request ID: 541e86dd-59d3-4b4a-bd7d-7ea33471f04c - Status: 404 - Time: 0.001s
+2026-03-18 18:25:20,996 - api.middleware - INFO - Request started: GET /api/v1//conversations - Request ID: a3f4970c-7d90-4068-ae9d-d539a1fff4ab - Client: 127.0.0.1
+2026-03-18 18:25:20,999 - api.middleware - INFO - Request completed: GET /api/v1//conversations - Request ID: a3f4970c-7d90-4068-ae9d-d539a1fff4ab - Status: 404 - Time: 0.003s
+2026-03-18 18:25:22,525 - api.middleware - INFO - Request started: GET /api/v1//conversations - Request ID: 5a676a74-128e-4899-9345-fb31a56fead5 - Client: 127.0.0.1
+2026-03-18 18:25:22,526 - api.middleware - INFO - Request completed: GET /api/v1//conversations - Request ID: 5a676a74-128e-4899-9345-fb31a56fead5 - Status: 404 - Time: 0.002s
+2026-03-18 18:34:04,978 - root - INFO - Logging configured successfully
+2026-03-18 18:34:06,778 - services.service_container - INFO - Initializing service container...
+2026-03-18 18:34:06,778 - services.service_container - INFO - Service container initialized successfully
+2026-03-18 18:34:06,800 - main - INFO - Starting up Policy Assistant API...
+2026-03-18 18:34:06,807 - repositories.database - INFO - Database tables created
+2026-03-18 18:34:06,807 - repositories.database - INFO - Database initialized successfully
+2026-03-18 18:34:06,815 - faiss.loader - INFO - Loading faiss with AVX2 support.
+2026-03-18 18:34:06,888 - faiss.loader - INFO - Successfully loaded faiss with AVX2 support.
+2026-03-18 18:34:06,908 - langchain_community.vectorstores.faiss - WARNING - `embedding_function` is expected to be an Embeddings object, support for passing in a function will soon be removed.
+2026-03-18 18:34:06,909 - root - INFO - Vector database loaded from vector_db
+2026-03-18 18:34:06,909 - main - INFO - Policy Assistant API started successfully
+2026-03-18 18:34:06,911 - main - INFO - Shutting down Policy Assistant API...
+2026-03-18 18:34:06,920 - root - INFO - Vector database saved to vector_db
+2026-03-18 18:34:06,921 - main - INFO - Policy Assistant API shutdown complete
+2026-03-18 18:34:37,935 - root - INFO - Logging configured successfully
+2026-03-18 18:34:39,346 - services.service_container - INFO - Initializing service container...
+2026-03-18 18:34:39,347 - services.service_container - INFO - Service container initialized successfully
+2026-03-18 18:34:39,373 - main - INFO - Starting up Policy Assistant API...
+2026-03-18 18:34:39,380 - repositories.database - INFO - Database tables created
+2026-03-18 18:34:39,390 - repositories.database - INFO - Database initialized successfully
+2026-03-18 18:34:39,399 - faiss.loader - INFO - Loading faiss with AVX2 support.
+2026-03-18 18:34:39,487 - faiss.loader - INFO - Successfully loaded faiss with AVX2 support.
+2026-03-18 18:34:39,592 - langchain_community.vectorstores.faiss - WARNING - `embedding_function` is expected to be an Embeddings object, support for passing in a function will soon be removed.
+2026-03-18 18:34:39,594 - root - INFO - Vector database loaded from vector_db
+2026-03-18 18:34:39,594 - main - INFO - Policy Assistant API started successfully
+2026-03-18 18:35:19,496 - api.middleware - INFO - Request started: GET / - Request ID: b2f830cb-ebe1-464a-8da8-886738c58be8 - Client: 127.0.0.1
+2026-03-18 18:35:19,500 - api.middleware - INFO - Request completed: GET / - Request ID: b2f830cb-ebe1-464a-8da8-886738c58be8 - Status: 404 - Time: 0.004s
+2026-03-18 18:35:19,560 - api.middleware - INFO - Request started: GET /favicon.ico - Request ID: 3054e911-8ba3-4bdc-a13f-9d28976d163f - Client: 127.0.0.1
+2026-03-18 18:35:19,565 - api.middleware - INFO - Request completed: GET /favicon.ico - Request ID: 3054e911-8ba3-4bdc-a13f-9d28976d163f - Status: 404 - Time: 0.006s
+2026-03-18 18:35:23,991 - api.middleware - INFO - Request started: GET /docs - Request ID: f6d822e2-bf28-42c3-af4a-268f293d8dbc - Client: 127.0.0.1
+2026-03-18 18:35:23,992 - api.middleware - INFO - Request completed: GET /docs - Request ID: f6d822e2-bf28-42c3-af4a-268f293d8dbc - Status: 200 - Time: 0.002s
+2026-03-18 18:35:24,217 - api.middleware - INFO - Request started: GET /openapi.json - Request ID: 6b6d8a14-57ac-4705-9caa-2072478b12e1 - Client: 127.0.0.1
+2026-03-18 18:35:24,331 - api.middleware - INFO - Request completed: GET /openapi.json - Request ID: 6b6d8a14-57ac-4705-9caa-2072478b12e1 - Status: 200 - Time: 0.113s
+2026-03-18 18:35:31,385 - api.middleware - INFO - Request started: GET /api/v1/conversations - Request ID: 99a0f8e2-8b88-480a-b7f5-de015d82cb40 - Client: 127.0.0.1
+2026-03-18 18:35:31,387 - services.conversation_service - INFO - Database conversation service initialized
+2026-03-18 18:35:31,389 - services.conversation_service - INFO - Database conversation service initialized
+2026-03-18 18:35:31,393 - api.middleware - INFO - Request completed: GET /api/v1/conversations - Request ID: 99a0f8e2-8b88-480a-b7f5-de015d82cb40 - Status: 200 - Time: 0.008s
+2026-03-18 18:36:34,779 - api.middleware - INFO - Request started: GET /api/v1//conversations - Request ID: ec080d85-35ae-469e-b97f-432905b1158c - Client: 127.0.0.1
+2026-03-18 18:36:34,781 - api.middleware - INFO - Request completed: GET /api/v1//conversations - Request ID: ec080d85-35ae-469e-b97f-432905b1158c - Status: 404 - Time: 0.002s
+2026-03-18 18:42:35,876 - root - INFO - Logging configured successfully
+2026-03-18 18:42:36,737 - services.service_container - INFO - Initializing service container...
+2026-03-18 18:42:36,738 - services.service_container - INFO - Service container initialized successfully
+2026-03-18 18:42:36,749 - main - INFO - Starting up Policy Assistant API...
+2026-03-18 18:42:36,751 - repositories.database - INFO - Database tables created
+2026-03-18 18:42:36,752 - repositories.database - INFO - Database initialized successfully
+2026-03-18 18:42:36,755 - faiss.loader - INFO - Loading faiss with AVX2 support.
+2026-03-18 18:42:36,798 - faiss.loader - INFO - Successfully loaded faiss with AVX2 support.
+2026-03-18 18:42:36,813 - langchain_community.vectorstores.faiss - WARNING - `embedding_function` is expected to be an Embeddings object, support for passing in a function will soon be removed.
+2026-03-18 18:42:36,815 - root - INFO - Vector database loaded from vector_db
+2026-03-18 18:42:36,815 - main - INFO - Policy Assistant API started successfully
+2026-03-18 18:43:03,805 - api.middleware - INFO - Request started: GET / - Request ID: cbe8c67f-ef99-4fa4-a3b7-b2e95f683212 - Client: 127.0.0.1
+2026-03-18 18:43:03,808 - api.middleware - INFO - Request completed: GET / - Request ID: cbe8c67f-ef99-4fa4-a3b7-b2e95f683212 - Status: 404 - Time: 0.003s
+2026-03-18 18:43:03,880 - api.middleware - INFO - Request started: GET /favicon.ico - Request ID: 8227e147-2253-4ded-8aec-bafb15e8b674 - Client: 127.0.0.1
+2026-03-18 18:43:03,883 - api.middleware - INFO - Request completed: GET /favicon.ico - Request ID: 8227e147-2253-4ded-8aec-bafb15e8b674 - Status: 404 - Time: 0.005s
+2026-03-18 18:44:50,592 - api.middleware - INFO - Request started: GET /static/index.html - Request ID: dcac2d05-4d67-4ddc-9af3-d36dc1728097 - Client: 127.0.0.1
+2026-03-18 18:44:50,679 - api.middleware - INFO - Request completed: GET /static/index.html - Request ID: dcac2d05-4d67-4ddc-9af3-d36dc1728097 - Status: 200 - Time: 0.088s
+2026-03-18 18:44:50,706 - api.middleware - INFO - Request started: GET /static/styles.css - Request ID: 0389281c-b016-41ef-801d-2bc73dac4bd4 - Client: 127.0.0.1
+2026-03-18 18:44:50,709 - api.middleware - INFO - Request completed: GET /static/styles.css - Request ID: 0389281c-b016-41ef-801d-2bc73dac4bd4 - Status: 200 - Time: 0.003s
+2026-03-18 18:44:50,719 - api.middleware - INFO - Request started: GET /static/app.js - Request ID: e647e52e-299e-4dda-8c71-b45aaf0e9173 - Client: 127.0.0.1
+2026-03-18 18:44:50,722 - api.middleware - INFO - Request completed: GET /static/app.js - Request ID: e647e52e-299e-4dda-8c71-b45aaf0e9173 - Status: 200 - Time: 0.004s
+2026-03-18 18:44:50,870 - api.middleware - INFO - Request started: GET /api/v1/conversations - Request ID: 19b55ddd-b926-478e-a8bb-1d408fb1690a - Client: 127.0.0.1
+2026-03-18 18:44:50,875 - services.conversation_service - INFO - Database conversation service initialized
+2026-03-18 18:44:50,878 - services.conversation_service - INFO - Database conversation service initialized
+2026-03-18 18:44:50,887 - api.middleware - INFO - Request completed: GET /api/v1/conversations - Request ID: 19b55ddd-b926-478e-a8bb-1d408fb1690a - Status: 200 - Time: 0.017s
+2026-03-18 18:44:50,916 - api.middleware - INFO - Request started: GET /favicon.ico - Request ID: 2ba15ab6-92e9-4f43-bd1c-733b1974ef75 - Client: 127.0.0.1
+2026-03-18 18:44:50,919 - api.middleware - INFO - Request completed: GET /favicon.ico - Request ID: 2ba15ab6-92e9-4f43-bd1c-733b1974ef75 - Status: 404 - Time: 0.003s
+2026-03-18 18:44:55,521 - api.middleware - INFO - Request started: GET /static/index.html - Request ID: aa5a9e6c-ffe8-4754-a34b-51752fdba942 - Client: 127.0.0.1
+2026-03-18 18:44:55,523 - api.middleware - INFO - Request completed: GET /static/index.html - Request ID: aa5a9e6c-ffe8-4754-a34b-51752fdba942 - Status: 304 - Time: 0.002s
+2026-03-18 18:44:55,548 - api.middleware - INFO - Request started: GET /static/app.js - Request ID: f6f0513b-33c2-4b79-9690-cc25008ec0b6 - Client: 127.0.0.1
+2026-03-18 18:44:55,550 - api.middleware - INFO - Request completed: GET /static/app.js - Request ID: f6f0513b-33c2-4b79-9690-cc25008ec0b6 - Status: 304 - Time: 0.002s
+2026-03-18 18:44:55,560 - api.middleware - INFO - Request started: GET /api/v1/conversations - Request ID: 8644a57c-8d67-4e71-9fdd-ea59cb8be434 - Client: 127.0.0.1
+2026-03-18 18:44:55,561 - services.conversation_service - INFO - Database conversation service initialized
+2026-03-18 18:44:55,563 - services.conversation_service - INFO - Database conversation service initialized
+2026-03-18 18:44:55,566 - api.middleware - INFO - Request completed: GET /api/v1/conversations - Request ID: 8644a57c-8d67-4e71-9fdd-ea59cb8be434 - Status: 200 - Time: 0.006s
+2026-03-18 18:44:58,574 - api.middleware - INFO - Request started: GET /api/v1/conversations - Request ID: 0468ed90-c469-4e18-a313-c59ed10e9a53 - Client: 127.0.0.1
+2026-03-18 18:44:58,574 - services.conversation_service - INFO - Database conversation service initialized
+2026-03-18 18:44:58,576 - services.conversation_service - INFO - Database conversation service initialized
+2026-03-18 18:44:58,578 - api.middleware - INFO - Request completed: GET /api/v1/conversations - Request ID: 0468ed90-c469-4e18-a313-c59ed10e9a53 - Status: 200 - Time: 0.003s
+2026-03-18 18:45:45,013 - root - INFO - Logging configured successfully
+2026-03-18 18:45:45,761 - services.service_container - INFO - Initializing service container...
+2026-03-18 18:45:45,761 - services.service_container - INFO - Service container initialized successfully
+2026-03-18 18:45:45,840 - main - INFO - Starting up Policy Assistant API...
+2026-03-18 18:45:45,842 - repositories.database - INFO - Database tables created
+2026-03-18 18:45:45,842 - repositories.database - INFO - Database initialized successfully
+2026-03-18 18:45:45,846 - faiss.loader - INFO - Loading faiss with AVX2 support.
+2026-03-18 18:45:45,874 - faiss.loader - INFO - Successfully loaded faiss with AVX2 support.
+2026-03-18 18:45:45,889 - langchain_community.vectorstores.faiss - WARNING - `embedding_function` is expected to be an Embeddings object, support for passing in a function will soon be removed.
+2026-03-18 18:45:45,890 - root - INFO - Vector database loaded from vector_db
+2026-03-18 18:45:45,891 - main - INFO - Policy Assistant API started successfully
+2026-03-18 18:45:45,892 - main - INFO - Shutting down Policy Assistant API...
+2026-03-18 18:45:45,898 - root - INFO - Vector database saved to vector_db
+2026-03-18 18:45:45,899 - main - INFO - Policy Assistant API shutdown complete
+2026-03-18 18:46:47,115 - root - INFO - Logging configured successfully
+2026-03-18 18:46:47,866 - services.service_container - INFO - Initializing service container...
+2026-03-18 18:46:47,866 - services.service_container - INFO - Service container initialized successfully
+2026-03-18 18:46:47,876 - main - INFO - Starting up Policy Assistant API...
+2026-03-18 18:46:47,878 - repositories.database - INFO - Database tables created
+2026-03-18 18:46:47,879 - repositories.database - INFO - Database initialized successfully
+2026-03-18 18:46:47,883 - faiss.loader - INFO - Loading faiss with AVX2 support.
+2026-03-18 18:46:47,919 - faiss.loader - INFO - Successfully loaded faiss with AVX2 support.
+2026-03-18 18:46:47,960 - langchain_community.vectorstores.faiss - WARNING - `embedding_function` is expected to be an Embeddings object, support for passing in a function will soon be removed.
+2026-03-18 18:46:47,961 - root - INFO - Vector database loaded from vector_db
+2026-03-18 18:46:47,961 - main - INFO - Policy Assistant API started successfully
+2026-03-18 18:46:52,615 - api.middleware - INFO - Request started: GET /api/v1/conversations - Request ID: e2d9ea5b-963b-4483-984b-a639e51b8abd - Client: 127.0.0.1
+2026-03-18 18:46:52,618 - services.conversation_service - INFO - Database conversation service initialized
+2026-03-18 18:46:52,624 - services.conversation_service - INFO - Database conversation service initialized
+2026-03-18 18:46:52,627 - api.middleware - INFO - Request completed: GET /api/v1/conversations - Request ID: e2d9ea5b-963b-4483-984b-a639e51b8abd - Status: 200 - Time: 0.012s
+2026-03-18 18:46:53,671 - api.middleware - INFO - Request started: GET /api/v1/conversations - Request ID: 050ad554-b79d-4f2d-a0ab-628d878c8506 - Client: 127.0.0.1
+2026-03-18 18:46:53,673 - services.conversation_service - INFO - Database conversation service initialized
+2026-03-18 18:46:53,674 - services.conversation_service - INFO - Database conversation service initialized
+2026-03-18 18:46:53,677 - api.middleware - INFO - Request completed: GET /api/v1/conversations - Request ID: 050ad554-b79d-4f2d-a0ab-628d878c8506 - Status: 200 - Time: 0.006s
+2026-03-18 18:46:53,841 - api.middleware - INFO - Request started: GET /api/v1/conversations - Request ID: 92834315-860f-4a1b-9304-5ef2a7861469 - Client: 127.0.0.1
+2026-03-18 18:46:53,843 - services.conversation_service - INFO - Database conversation service initialized
+2026-03-18 18:46:53,845 - services.conversation_service - INFO - Database conversation service initialized
+2026-03-18 18:46:53,850 - api.middleware - INFO - Request completed: GET /api/v1/conversations - Request ID: 92834315-860f-4a1b-9304-5ef2a7861469 - Status: 200 - Time: 0.009s
+2026-03-18 18:46:54,009 - api.middleware - INFO - Request started: GET /api/v1/conversations - Request ID: 7dc83351-fb76-4c35-9a03-c8412287f185 - Client: 127.0.0.1
+2026-03-18 18:46:54,011 - services.conversation_service - INFO - Database conversation service initialized
+2026-03-18 18:46:54,013 - services.conversation_service - INFO - Database conversation service initialized
+2026-03-18 18:46:54,016 - api.middleware - INFO - Request completed: GET /api/v1/conversations - Request ID: 7dc83351-fb76-4c35-9a03-c8412287f185 - Status: 200 - Time: 0.007s
+2026-03-18 18:46:54,173 - api.middleware - INFO - Request started: GET /api/v1/conversations - Request ID: 0449347d-cabf-4e30-a68b-bfc56f6636a7 - Client: 127.0.0.1
+2026-03-18 18:46:54,175 - services.conversation_service - INFO - Database conversation service initialized
+2026-03-18 18:46:54,178 - services.conversation_service - INFO - Database conversation service initialized
+2026-03-18 18:46:54,181 - api.middleware - INFO - Request completed: GET /api/v1/conversations - Request ID: 0449347d-cabf-4e30-a68b-bfc56f6636a7 - Status: 200 - Time: 0.007s
+2026-03-18 18:46:54,321 - api.middleware - INFO - Request started: GET /api/v1/conversations - Request ID: 743db726-6d43-4cf0-98d5-a480fbfa8581 - Client: 127.0.0.1
+2026-03-18 18:46:54,323 - services.conversation_service - INFO - Database conversation service initialized
+2026-03-18 18:46:54,324 - services.conversation_service - INFO - Database conversation service initialized
+2026-03-18 18:46:54,327 - api.middleware - INFO - Request completed: GET /api/v1/conversations - Request ID: 743db726-6d43-4cf0-98d5-a480fbfa8581 - Status: 200 - Time: 0.006s
+2026-03-18 18:46:54,479 - api.middleware - INFO - Request started: GET /api/v1/conversations - Request ID: 026d1a5f-8bc8-4cdf-9b18-fdb5caa3fe34 - Client: 127.0.0.1
+2026-03-18 18:46:54,480 - services.conversation_service - INFO - Database conversation service initialized
+2026-03-18 18:46:54,482 - services.conversation_service - INFO - Database conversation service initialized
+2026-03-18 18:46:54,484 - api.middleware - INFO - Request completed: GET /api/v1/conversations - Request ID: 026d1a5f-8bc8-4cdf-9b18-fdb5caa3fe34 - Status: 200 - Time: 0.006s
+2026-03-18 18:46:54,623 - api.middleware - INFO - Request started: GET /api/v1/conversations - Request ID: 90df08c6-1e38-4b1a-84f3-eef7276faa2b - Client: 127.0.0.1
+2026-03-18 18:46:54,625 - services.conversation_service - INFO - Database conversation service initialized
+2026-03-18 18:46:54,627 - services.conversation_service - INFO - Database conversation service initialized
+2026-03-18 18:46:54,629 - api.middleware - INFO - Request completed: GET /api/v1/conversations - Request ID: 90df08c6-1e38-4b1a-84f3-eef7276faa2b - Status: 200 - Time: 0.006s
+2026-03-18 18:46:54,795 - api.middleware - INFO - Request started: GET /api/v1/conversations - Request ID: 3be98751-f5ff-4c8a-bf06-7c5b1360449c - Client: 127.0.0.1
+2026-03-18 18:46:54,797 - services.conversation_service - INFO - Database conversation service initialized
+2026-03-18 18:46:54,799 - services.conversation_service - INFO - Database conversation service initialized
+2026-03-18 18:46:54,803 - api.middleware - INFO - Request completed: GET /api/v1/conversations - Request ID: 3be98751-f5ff-4c8a-bf06-7c5b1360449c - Status: 200 - Time: 0.008s
+2026-03-18 18:46:54,926 - api.middleware - INFO - Request started: GET /api/v1/conversations - Request ID: d2b9aa1a-f345-41e5-901e-9f07013c6e4e - Client: 127.0.0.1
+2026-03-18 18:46:54,927 - services.conversation_service - INFO - Database conversation service initialized
+2026-03-18 18:46:54,928 - services.conversation_service - INFO - Database conversation service initialized
+2026-03-18 18:46:54,930 - api.middleware - INFO - Request completed: GET /api/v1/conversations - Request ID: d2b9aa1a-f345-41e5-901e-9f07013c6e4e - Status: 200 - Time: 0.005s
+2026-03-18 18:46:55,137 - api.middleware - INFO - Request started: GET /api/v1/conversations - Request ID: cf6a62b1-5e81-4b78-8a9c-3ef20c3b70c6 - Client: 127.0.0.1
+2026-03-18 18:46:55,138 - services.conversation_service - INFO - Database conversation service initialized
+2026-03-18 18:46:55,140 - services.conversation_service - INFO - Database conversation service initialized
+2026-03-18 18:46:55,143 - api.middleware - INFO - Request completed: GET /api/v1/conversations - Request ID: cf6a62b1-5e81-4b78-8a9c-3ef20c3b70c6 - Status: 200 - Time: 0.006s
+2026-03-18 18:46:55,296 - api.middleware - INFO - Request started: GET /api/v1/conversations - Request ID: 0fd9325c-7c5a-43cd-b0a4-c6add45e4137 - Client: 127.0.0.1
+2026-03-18 18:46:55,297 - services.conversation_service - INFO - Database conversation service initialized
+2026-03-18 18:46:55,298 - services.conversation_service - INFO - Database conversation service initialized
+2026-03-18 18:46:55,300 - api.middleware - INFO - Request completed: GET /api/v1/conversations - Request ID: 0fd9325c-7c5a-43cd-b0a4-c6add45e4137 - Status: 200 - Time: 0.004s
+2026-03-18 18:46:55,491 - api.middleware - INFO - Request started: GET /api/v1/conversations - Request ID: 87c81949-00e3-439b-a3cf-9a229d61cc4b - Client: 127.0.0.1
+2026-03-18 18:46:55,491 - services.conversation_service - INFO - Database conversation service initialized
+2026-03-18 18:46:55,494 - services.conversation_service - INFO - Database conversation service initialized
+2026-03-18 18:46:55,496 - api.middleware - INFO - Request completed: GET /api/v1/conversations - Request ID: 87c81949-00e3-439b-a3cf-9a229d61cc4b - Status: 200 - Time: 0.005s
+2026-03-18 18:47:07,929 - api.middleware - INFO - Request started: GET /api/v1/conversations - Request ID: 30c65041-c5dc-489a-9248-de69d7a0fc5a - Client: 127.0.0.1
+2026-03-18 18:47:07,930 - services.conversation_service - INFO - Database conversation service initialized
+2026-03-18 18:47:07,932 - services.conversation_service - INFO - Database conversation service initialized
+2026-03-18 18:47:07,937 - api.middleware - INFO - Request completed: GET /api/v1/conversations - Request ID: 30c65041-c5dc-489a-9248-de69d7a0fc5a - Status: 200 - Time: 0.007s
+2026-03-18 18:47:29,467 - api.middleware - INFO - Request started: GET /api/v1/conversations - Request ID: 28dceeb7-6e52-4e65-b5cb-7f692391d69d - Client: 127.0.0.1
+2026-03-18 18:47:29,468 - services.conversation_service - INFO - Database conversation service initialized
+2026-03-18 18:47:29,470 - services.conversation_service - INFO - Database conversation service initialized
+2026-03-18 18:47:29,472 - api.middleware - INFO - Request completed: GET /api/v1/conversations - Request ID: 28dceeb7-6e52-4e65-b5cb-7f692391d69d - Status: 200 - Time: 0.006s
+2026-03-18 18:47:52,155 - api.middleware - INFO - Request started: OPTIONS /api/v1/chat - Request ID: 3e6f2bee-2ff6-4fbe-ab49-dff2db830538 - Client: 127.0.0.1
+2026-03-18 18:47:52,157 - api.middleware - INFO - Request completed: OPTIONS /api/v1/chat - Request ID: 3e6f2bee-2ff6-4fbe-ab49-dff2db830538 - Status: 200 - Time: 0.002s
+2026-03-18 18:47:52,160 - api.middleware - INFO - Request started: POST /api/v1/chat - Request ID: 868be7d6-441d-4c67-942d-b756cebe5a75 - Client: 127.0.0.1
+2026-03-18 18:47:52,165 - services.conversation_service - INFO - Database conversation service initialized
+2026-03-18 18:47:52,169 - api.routes_main - ERROR - Unexpected error in chat: 'ServiceContainer' object has no attribute 'QueryService'
+2026-03-18 18:47:52,170 - api.middleware - INFO - Request completed: POST /api/v1/chat - Request ID: 868be7d6-441d-4c67-942d-b756cebe5a75 - Status: 500 - Time: 0.010s
+2026-03-18 18:51:50,324 - main - INFO - Shutting down Policy Assistant API...
+2026-03-18 18:51:50,327 - root - INFO - Vector database saved to vector_db
+2026-03-18 18:51:50,328 - main - INFO - Policy Assistant API shutdown complete
+2026-03-18 18:52:00,597 - root - INFO - Logging configured successfully
+2026-03-18 18:52:01,436 - services.service_container - INFO - Initializing service container...
+2026-03-18 18:52:01,436 - services.service_container - INFO - Service container initialized successfully
+2026-03-18 18:52:01,446 - main - INFO - Starting up Policy Assistant API...
+2026-03-18 18:52:01,449 - repositories.database - INFO - Database tables created
+2026-03-18 18:52:01,450 - repositories.database - INFO - Database initialized successfully
+2026-03-18 18:52:01,454 - faiss.loader - INFO - Loading faiss with AVX2 support.
+2026-03-18 18:52:01,485 - faiss.loader - INFO - Successfully loaded faiss with AVX2 support.
+2026-03-18 18:52:01,532 - langchain_community.vectorstores.faiss - WARNING - `embedding_function` is expected to be an Embeddings object, support for passing in a function will soon be removed.
+2026-03-18 18:52:01,533 - root - INFO - Vector database loaded from vector_db
+2026-03-18 18:52:01,533 - main - INFO - Policy Assistant API started successfully
+2026-03-18 18:54:26,748 - root - INFO - Logging configured successfully
+2026-03-18 18:54:28,471 - services.service_container - INFO - Initializing service container...
+2026-03-18 18:54:28,471 - services.service_container - INFO - Service container initialized successfully
+2026-03-18 18:54:28,497 - main - INFO - Starting up Policy Assistant API...
+2026-03-18 18:54:28,501 - repositories.database - INFO - Database tables created
+2026-03-18 18:54:28,502 - repositories.database - INFO - Database initialized successfully
+2026-03-18 18:54:28,507 - faiss.loader - INFO - Loading faiss with AVX2 support.
+2026-03-18 18:54:28,561 - faiss.loader - INFO - Successfully loaded faiss with AVX2 support.
+2026-03-18 18:54:28,583 - langchain_community.vectorstores.faiss - WARNING - `embedding_function` is expected to be an Embeddings object, support for passing in a function will soon be removed.
+2026-03-18 18:54:28,584 - root - INFO - Vector database loaded from vector_db
+2026-03-18 18:54:28,585 - main - INFO - Policy Assistant API started successfully
+2026-03-18 18:54:32,970 - api.middleware - INFO - Request started: GET / - Request ID: f591823b-bbb3-4df7-877d-6cdd8b196cc8 - Client: 127.0.0.1
+2026-03-18 18:54:32,974 - api.middleware - INFO - Request completed: GET / - Request ID: f591823b-bbb3-4df7-877d-6cdd8b196cc8 - Status: 404 - Time: 0.004s
+2026-03-18 18:54:36,598 - api.middleware - INFO - Request started: GET /docs - Request ID: 04a9b4ad-58d4-4bf1-884b-77244d5cb70c - Client: 127.0.0.1
+2026-03-18 18:54:36,600 - api.middleware - INFO - Request completed: GET /docs - Request ID: 04a9b4ad-58d4-4bf1-884b-77244d5cb70c - Status: 200 - Time: 0.002s
+2026-03-18 18:54:36,798 - api.middleware - INFO - Request started: GET /openapi.json - Request ID: d59ea648-1bcc-4793-8ad4-0fd190f732bc - Client: 127.0.0.1
+2026-03-18 18:54:36,918 - api.middleware - INFO - Request completed: GET /openapi.json - Request ID: d59ea648-1bcc-4793-8ad4-0fd190f732bc - Status: 200 - Time: 0.120s
+2026-03-18 18:54:58,213 - api.middleware - INFO - Request started: POST /api/v1/chat - Request ID: 891d0bfc-bada-4e8a-981a-bff7b8d27211 - Client: 127.0.0.1
+2026-03-18 18:54:58,219 - services.conversation_service - INFO - Database conversation service initialized
+2026-03-18 18:54:58,221 - api.routes_main - ERROR - Unexpected error in chat: 'ServiceContainer' object has no attribute 'QueryService'
+2026-03-18 18:54:58,222 - api.middleware - INFO - Request completed: POST /api/v1/chat - Request ID: 891d0bfc-bada-4e8a-981a-bff7b8d27211 - Status: 500 - Time: 0.009s
+2026-03-18 18:55:22,942 - api.middleware - INFO - Request started: POST /api/v1/chat - Request ID: 3f4c3147-cc8c-4550-8873-05379d5c6fa0 - Client: 127.0.0.1
+2026-03-18 18:55:22,944 - services.conversation_service - INFO - Database conversation service initialized
+2026-03-18 18:55:22,945 - api.routes_main - ERROR - Unexpected error in chat: 'ServiceContainer' object has no attribute 'QueryService'
+2026-03-18 18:55:22,946 - api.middleware - INFO - Request completed: POST /api/v1/chat - Request ID: 3f4c3147-cc8c-4550-8873-05379d5c6fa0 - Status: 500 - Time: 0.005s
+2026-03-18 19:01:04,635 - root - INFO - Logging configured successfully
+2026-03-18 19:01:05,514 - services.service_container - INFO - Initializing service container...
+2026-03-18 19:01:05,514 - services.service_container - INFO - Service container initialized successfully
+2026-03-18 19:01:05,516 - repositories.database - INFO - Database tables created
+2026-03-18 19:01:05,516 - repositories.database - INFO - Database initialized successfully
+2026-03-18 19:01:05,519 - faiss.loader - INFO - Loading faiss with AVX2 support.
+2026-03-18 19:01:05,549 - faiss.loader - INFO - Successfully loaded faiss with AVX2 support.
+2026-03-18 19:01:05,559 - langchain_community.vectorstores.faiss - WARNING - `embedding_function` is expected to be an Embeddings object, support for passing in a function will soon be removed.
+2026-03-18 19:01:05,560 - root - INFO - Vector database loaded from vector_db
+2026-03-18 19:01:28,922 - api.middleware - INFO - Request started: GET /docs - Request ID: 3bcc276c-9b1a-4684-b703-ca5b98db6e66 - Client: 127.0.0.1
+2026-03-18 19:01:28,924 - api.middleware - INFO - Request completed: GET /docs - Request ID: 3bcc276c-9b1a-4684-b703-ca5b98db6e66 - Status: 200 - Time: 0.003s
+2026-03-18 19:01:29,032 - api.middleware - INFO - Request started: GET /openapi.json - Request ID: 7c17f17e-8bf3-4249-8077-3818959bd0c9 - Client: 127.0.0.1
+2026-03-18 19:01:29,101 - api.middleware - INFO - Request completed: GET /openapi.json - Request ID: 7c17f17e-8bf3-4249-8077-3818959bd0c9 - Status: 200 - Time: 0.070s
+2026-03-18 19:01:36,748 - api.middleware - INFO - Request started: GET /api/v1/conversations - Request ID: f97d0e6a-bb96-47f0-854f-79b039ef828f - Client: 127.0.0.1
+2026-03-18 19:01:36,749 - services.conversation_service - INFO - Database conversation service initialized
+2026-03-18 19:01:36,752 - services.conversation_service - INFO - Database conversation service initialized
+2026-03-18 19:01:36,754 - api.middleware - INFO - Request completed: GET /api/v1/conversations - Request ID: f97d0e6a-bb96-47f0-854f-79b039ef828f - Status: 200 - Time: 0.006s
+2026-03-18 19:02:11,044 - api.middleware - INFO - Request started: POST /api/v1/chat - Request ID: 7f116f4b-0d74-49cc-9a7c-3894afcef0ef - Client: 127.0.0.1
+2026-03-18 19:02:11,051 - services.conversation_service - INFO - Database conversation service initialized
+2026-03-18 19:02:11,063 - api.routes_main - ERROR - Unexpected error in chat: 'ServiceContainer' object has no attribute 'QueryService'
+2026-03-18 19:02:11,065 - api.middleware - INFO - Request completed: POST /api/v1/chat - Request ID: 7f116f4b-0d74-49cc-9a7c-3894afcef0ef - Status: 500 - Time: 0.021s
+2026-03-18 19:02:23,028 - root - INFO - Vector database saved to vector_db
+2026-03-18 19:02:30,867 - root - INFO - Logging configured successfully
+2026-03-18 19:02:31,643 - services.service_container - INFO - Initializing service container...
+2026-03-18 19:02:31,643 - services.service_container - INFO - Service container initialized successfully
+2026-03-18 19:02:31,646 - repositories.database - INFO - Database tables created
+2026-03-18 19:02:31,647 - repositories.database - INFO - Database initialized successfully
+2026-03-18 19:02:31,651 - faiss.loader - INFO - Loading faiss with AVX2 support.
+2026-03-18 19:02:31,693 - faiss.loader - INFO - Successfully loaded faiss with AVX2 support.
+2026-03-18 19:02:31,745 - langchain_community.vectorstores.faiss - WARNING - `embedding_function` is expected to be an Embeddings object, support for passing in a function will soon be removed.
+2026-03-18 19:02:31,746 - root - INFO - Vector database loaded from vector_db
+2026-03-18 19:02:31,779 - root - INFO - Vector database saved to vector_db
