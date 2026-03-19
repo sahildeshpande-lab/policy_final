@@ -3,264 +3,53 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="AI-powered HR assistant for company policies, leave applications, WFH requests, and IT support">
-    <title>Nexus HR — Intelligent Workspace Assistant</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&display=swap" rel="stylesheet">
+    <title>Policy Assistant</title>
     <link rel="stylesheet" href="/static/styles.css">
 </head>
 <body>
-
-<!-- Feature Showcase Modal -->
-<div id="featureShowcase" class="showcase-overlay hidden">
-    <div class="showcase-modal">
-        <button class="showcase-close" id="closeShowcase" aria-label="Close">✕</button>
-        <div class="showcase-header">
-            <div class="showcase-badge">WHAT CAN I DO?</div>
-            <h2 class="showcase-title">Everything You Need,<br><span>One Conversation Away</span></h2>
+    <div class="sidebar">
+        <h2>📄 PDF Upload</h2>
+        <div class="upload-section">
+            <input type="file" id="pdfUpload" accept=".pdf">
+            <button id="uploadBtn">Upload</button>
+            <div id="uploadStatus"></div>
         </div>
-        <div class="showcase-track-wrapper">
-            <div class="showcase-track" id="showcaseTrack">
-                <div class="feature-card" data-feature="policies">
-                    <div class="feature-card-icon">📋</div>
-                    <div class="feature-card-tag">KNOWLEDGE BASE</div>
-                    <h3>Company Policies</h3>
-                    <p>Instantly query any company policy — HR guidelines, code of conduct, benefits, and more — powered by your uploaded PDF documents.</p>
-                    <ul class="feature-highlights">
-                        <li>✦ PDF document search</li>
-                        <li>✦ Policy Q&amp;A</li>
-                        <li>✦ Source citations</li>
-                    </ul>
-                    <button class="feature-try-btn" data-type="Company Policies">Try It →</button>
-                </div>
-                <div class="feature-card" data-feature="leave">
-                    <div class="feature-card-icon">🌴</div>
-                    <div class="feature-card-tag">WORKFLOW</div>
-                    <h3>Leave Applications</h3>
-                    <p>Apply for planned leave, sick leave, casual leave and more through a guided conversational flow. No forms, no hassle.</p>
-                    <ul class="feature-highlights">
-                        <li>✦ Planned &amp; ad-hoc leaves</li>
-                        <li>✦ Multiple leave types</li>
-                        <li>✦ Auto-routes to manager</li>
-                    </ul>
-                    <button class="feature-try-btn" data-type="Leave Apply">Try It →</button>
-                </div>
-                <div class="feature-card" data-feature="wfh">
-                    <div class="feature-card-icon">🏠</div>
-                    <div class="feature-card-tag">WORKFLOW</div>
-                    <h3>Work From Home</h3>
-                    <p>Request WFH days within your quota or submit extra requests that get escalated to HR — all in under 60 seconds.</p>
-                    <ul class="feature-highlights">
-                        <li>✦ Normal &amp; extra quota</li>
-                        <li>✦ Date range picker</li>
-                        <li>✦ HR escalation flow</li>
-                    </ul>
-                    <button class="feature-try-btn" data-type="Apply WFH">Try It →</button>
-                </div>
-                <div class="feature-card" data-feature="it">
-                    <div class="feature-card-icon">🛠️</div>
-                    <div class="feature-card-tag">SUPPORT</div>
-                    <h3>IT Ticket Raising</h3>
-                    <p>Log hardware issues, software bugs, security concerns or HR document requests. Attach screenshots and get routed to the right team instantly.</p>
-                    <ul class="feature-highlights">
-                        <li>✦ 9 issue categories</li>
-                        <li>✦ File attachments</li>
-                        <li>✦ Auto-routing to IT/HR</li>
-                    </ul>
-                    <button class="feature-try-btn" data-type="IT Ticket Raised">Try It →</button>
-                </div>
-                <div class="feature-card" data-feature="ai">
-                    <div class="feature-card-icon">🤖</div>
-                    <div class="feature-card-tag">AI ASSISTANT</div>
-                    <h3>Smart HR Guidance</h3>
-                    <p>Ask anything — compensation, appraisals, benefits, process questions. The AI draws from your company's knowledge base for accurate answers.</p>
-                    <ul class="feature-highlights">
-                        <li>✦ Conversational AI</li>
-                        <li>✦ Thread-based memory</li>
-                        <li>✦ Policy-aware responses</li>
-                    </ul>
-                    <button class="feature-try-btn" data-type="HR Related Instructions">Try It →</button>
-                </div>
-            </div>
-        </div>
-        <div class="showcase-nav">
-            <button class="showcase-nav-btn" id="prevCard">‹</button>
-            <div class="showcase-dots" id="showcaseDots"></div>
-            <button class="showcase-nav-btn" id="nextCard">›</button>
-        </div>
+        <hr>
+        <h2>💬 Conversations</h2>
+        <button id="newChatBtn">New Chat</button>
+        <div id="conversationsList"></div>
     </div>
-</div>
-
-<div class="app-container">
-    <!-- Sidebar -->
-    <aside class="sidebar" role="complementary">
-        <div class="sidebar-brand">
-            <div class="brand-mark">N</div>
-            <div class="brand-text">
-                <span class="brand-name">Nexus HR</span>
-                <span class="brand-tagline">Intelligent Assistant</span>
-            </div>
+    
+    <div class="main-content">
+        <div class="header">
+            <h1>Policy Chatbot</h1>
+            <button id="logoutBtn">🚪 Logout</button>
         </div>
-
-        <div class="sidebar-section">
-            <div class="section-label">KNOWLEDGE BASE</div>
-            <div class="upload-zone" id="uploadZone">
-                <div class="upload-icon">📄</div>
-                <div class="upload-text">Drop PDF here or</div>
-                <label for="pdfUpload" class="upload-browse">browse file</label>
-                <input type="file" id="pdfUpload" accept=".pdf" hidden>
-                <div class="upload-hint">Max 10MB · PDF only</div>
-            </div>
-            <button id="uploadBtn" class="sidebar-btn primary">
-                <span class="btn-icon">⬆</span> Upload Document
-            </button>
-            <div id="uploadStatus" class="upload-status" role="status" aria-live="polite"></div>
-        </div>
-
-        <div class="sidebar-divider"></div>
-
-        <div class="sidebar-section">
-            <div class="section-label">CONVERSATIONS</div>
-            <button id="newChatBtn" class="sidebar-btn ghost">
-                <span class="btn-icon">✦</span> New Chat
-            </button>
-            <div id="conversationsList" class="conversations-list" role="list"></div>
-        </div>
-
-        <div class="sidebar-footer">
-            <button id="showFeaturesBtn" class="sidebar-btn accent" aria-label="Show all features">
-                <span class="btn-icon">🚀</span> Explore Features
-            </button>
-        </div>
-    </aside>
-
-    <!-- Main Content -->
-    <main class="main-content" role="main">
-        <header class="topbar">
-            <div class="topbar-left">
-                <div class="topbar-status">
-                    <span class="status-dot"></span>
-                    <span class="status-text">AI Online</span>
-                </div>
-            </div>
-            <h1 class="topbar-title">HR Assistant</h1>
-            <div class="topbar-right">
-                <button id="logoutBtn" class="icon-btn" aria-label="Logout" title="Logout">
-                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"/><polyline points="16 17 21 12 16 7"/><line x1="21" y1="12" x2="9" y2="12"/></svg>
-                </button>
-            </div>
-        </header>
-
-        <!-- Quick-access category bar always visible below header -->
-        <nav class="category-bar" id="categoryBar" role="group" aria-label="Select query category">
-            <button class="bar-pill active" data-type="Any Query" aria-pressed="true">
-                <span class="bar-icon">💬</span><span>Any Query</span>
-            </button>
-            <button class="bar-pill" data-type="Company Policies" aria-pressed="false">
-                <span class="bar-icon">📋</span><span>Company Policies</span>
-            </button>
-            <button class="bar-pill" data-type="Leave Apply" aria-pressed="false">
-                <span class="bar-icon">🌴</span><span>Leave Apply</span>
-            </button>
-            <button class="bar-pill" data-type="Apply WFH" aria-pressed="false">
-                <span class="bar-icon">🏠</span><span>Apply WFH</span>
-            </button>
-            <button class="bar-pill" data-type="IT Ticket Raised" aria-pressed="false">
-                <span class="bar-icon">🛠️</span><span>IT Ticket</span>
-            </button>
-            <button class="bar-pill" data-type="HR Related Instructions" aria-pressed="false">
-                <span class="bar-icon">📌</span><span>HR Instructions</span>
-            </button>
-        </nav>
-
-        <div class="chat-area">
-            <!-- Welcome Screen -->
+        
+        <div class="chat-container">
             <div id="welcomeScreen" class="welcome-screen">
-                <div class="welcome-glow"></div>
-                <div class="welcome-content">
-                    <div class="welcome-avatar">
-                        <div class="avatar-ring"></div>
-                        <span class="avatar-emoji">✦</span>
-                    </div>
-                    <h2 class="welcome-heading">How can I help you today?</h2>
-                    <p class="welcome-sub">Choose a category or type anything below</p>
-
-                    <div class="category-grid" id="categoryPills" role="group">
-                        <button class="cat-pill active" data-type="Any Query" aria-pressed="true">
-                            <span class="cat-icon">💬</span>
-                            <span>Any Query</span>
-                        </button>
-                        <button class="cat-pill" data-type="Company Policies" aria-pressed="false">
-                            <span class="cat-icon">📋</span>
-                            <span>Company Policies</span>
-                        </button>
-                        <button class="cat-pill" data-type="Leave Apply" aria-pressed="false">
-                            <span class="cat-icon">🌴</span>
-                            <span>Leave Apply</span>
-                        </button>
-                        <button class="cat-pill" data-type="Apply WFH" aria-pressed="false">
-                            <span class="cat-icon">🏠</span>
-                            <span>Apply WFH</span>
-                        </button>
-                        <button class="cat-pill" data-type="IT Ticket Raised" aria-pressed="false">
-                            <span class="cat-icon">🛠️</span>
-                            <span>IT Ticket</span>
-                        </button>
-                        <button class="cat-pill" data-type="HR Related Instructions" aria-pressed="false">
-                            <span class="cat-icon">📌</span>
-                            <span>HR Instructions</span>
-                        </button>
-                    </div>
-
-                    <div class="active-mode-bar">
-                        <span class="mode-label">Mode:</span>
-                        <span class="mode-chip" id="currentCategoryText">Any Query</span>
-                    </div>
-
-                    <button class="explore-btn" id="exploreBtn">
-                        <span>✦ Explore all features</span>
-                        <span class="explore-arrow">→</span>
-                    </button>
+                <h3>Hello, how can I help you today?</h3>
+                <div class="pills" id="categoryPills">
+                    <button class="pill active" data-type="Any Query">Any Query</button>
+                    <button class="pill" data-type="Company Policies">Company Policies</button>
+                    <button class="pill" data-type="Leave Apply">Leave Apply</button>
+                    <button class="pill" data-type="Apply WFH">Apply WFH</button>
+                    <button class="pill" data-type="IT Ticket Raised">IT Ticket Raised</button>
+                    <button class="pill" data-type="HR Related Instructions">HR Related Instructions</button>
                 </div>
+                <div class="current-category">Currently assisting with: <strong id="currentCategoryText">Any Query</strong></div>
             </div>
+            
+            <div id="chatHistory" class="chat-history"></div>
+            
 
-            <!-- Chat History -->
-            <div id="chatHistory" class="chat-history" role="log" aria-live="polite"></div>
         </div>
-
-        <!-- Input Area -->
-        <footer class="input-dock">
-            <div class="input-wrap">
-                <input type="text" id="chatInput" placeholder="Ask anything about HR policies, leave, WFH, IT…" autocomplete="off" aria-label="Type your message">
-                <button id="sendBtn" class="send-btn" aria-label="Send">
-                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
-                </button>
-            </div>
-            <div class="input-footer-hint">Nexus HR uses AI — verify important decisions with your HR team</div>
-        </footer>
-    </main>
-</div>
-
-<!-- Loading Overlay -->
-<div id="loadingOverlay" class="loading-overlay hidden" role="dialog" aria-modal="true" aria-label="Loading">
-    <div class="loader-ring">
-        <div></div><div></div><div></div><div></div>
+        
+        <div class="input-area">
+            <input type="text" id="chatInput" placeholder="Ask a query...">
+            <button id="sendBtn">Send</button>
+        </div>
     </div>
-    <span class="loading-text" id="loadingText">Processing…</span>
-</div>
-
-<!-- Toast -->
-<div id="errorToast" class="toast hidden" role="alert" aria-live="assertive">
-    <span class="toast-icon">⚠</span>
-    <span class="error-message"></span>
-    <button class="error-close" aria-label="Close">✕</button>
-</div>
-
-<div id="successToast" class="toast success hidden" role="status">
-    <span class="toast-icon">✓</span>
-    <span class="success-message"></span>
-</div>
-
-<script src="/static/app.js"></script>
+    <script src="/static/app.js"></script>
 </body>
 </html>
