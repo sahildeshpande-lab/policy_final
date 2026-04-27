@@ -2,3 +2,6 @@
 models_cache/
 venv
 pdfs
+__pycache__
+uploaded_pdfs.json
+
